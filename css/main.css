@@ -1,3 +1,75 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
 
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: max-content;
+  box-shadow: 0 0px 10px hsla(0, 0%, 0%, 0.315);
+  background-color: #ffffff;
+}
+
+.header-content {
+  padding: 15px;
+  width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-content img {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+}
+
+.header-right {
+  margin-left: auto;
+  font-size: 0px;
+}
+.header-right button {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 70px;
+  font-size: 16px;
+  border: none;
+  box-shadow: none;
+}
+.header-right button:hover {
+  background-color: rgba(104, 183, 253, 0.3764705882);
+  color: #3c93df;
+}
+
+.request-conteiner {
+  margin: 0 auto;
+  width: 1220px;
+  display: flex;
+  margin-top: 200px;
+  padding: 15px;
+}
+
+.request-left {
+  margin-right: auto;
+  padding: 15px;
+  align-self: end;
+  text-align: center;
+  width: 50%;
+}
+.request-left p {
+  padding: 15px;
+}
+.request-left h1 {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.request-right {
+  padding: 15px;
+  width: 50%;
+}
 
 /*# sourceMappingURL=main.css.map */

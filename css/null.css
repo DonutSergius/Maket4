@@ -1,0 +1,62 @@
+/* Обнулення стандартних стилів */
+
+/* Запобігає відступам та відступам між inline-блоками */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Стилізація тегу body */
+body {
+    line-height: 1.6;
+}
+
+/* Всі посилання повинні мати кольоровий текст та прихований підкреслювання */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Зберігає стандартний вигляд форми */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+/* Зберігає стандартний вигляд HTML5-елементів */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+/* Забороняє браузерам визначати стилі для неконтрольованих елементів */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Забороняє браузерам заокруглювати куты у кнопок */
+button, input {
+    overflow: visible;
+}
+
+/* Забороняє WebKit змінювати стилі за допомогою анімації і переходу */
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-animation: none;
+    animation: none;
+}
+
+/* Скасовує декоративне збільшення шрифтів для небажаних елементів у IE11 і вище */
+button,
+input {
+    overflow: visible;
+    font: inherit;
+}
+
+/* Забороняє textarea змінювати стилі за допомогою анімації і переходу */
+textarea {
+    -webkit-animation: none;
+    animation: none;
+}
