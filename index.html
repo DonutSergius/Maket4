@@ -18,18 +18,71 @@
       <div class="header-content">
         <img src="img/logo_Oxit.png" alt="logo_Oxit" />
         <div class="header-right">
-          <button>Головна</button>
+          <button data-section="main" onclick="scrollToSection('main')">
+            Головна
+          </button>
           <button data-section="course" onclick="scrollToSection('course')">
             Програма курсу
           </button>
-          <button>Відгук про курс</button>
-          <button>Відео</button>
+          <button
+            data-section="markCurse"
+            onclick="scrollToSection('markCurse')"
+          >
+            Відгук про курс
+          </button>
+          <button data-section="video" onclick="scrollToSection('video')">
+            Відео
+          </button>
           <button data-section="mentor" onclick="scrollToSection('mentor')">
             Ментори
           </button>
           <button data-section="request" onclick="scrollToSection('request')">
             Подати заявку
           </button>
+        </div>
+        <div class="backcolor">
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="menu">
+            <li>
+              <button data-section="main" onclick="scrollToSection('main')">
+                Головна
+              </button>
+            </li>
+            <li>
+              <button data-section="course" onclick="scrollToSection('course')">
+                Програма курсу
+              </button>
+            </li>
+            <li>
+              <button
+                data-section="markCurse"
+                onclick="scrollToSection('markCurse')"
+              >
+                Відгук про курс
+              </button>
+            </li>
+            <li>
+              <button data-section="video" onclick="scrollToSection('video')">
+                Відео
+              </button>
+            </li>
+            <li>
+              <button data-section="mentor" onclick="scrollToSection('mentor')">
+                Ментори
+              </button>
+            </li>
+            <li>
+              <button
+                data-section="request"
+                onclick="scrollToSection('request')"
+              >
+                Подати заявку
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -136,5 +189,5 @@
     </section>
   </body>
   <script src="js/menu.js"></script>
-  <script src="js/course_slider.js"></script>
+  <!--  <script src="js/course_slider.js"></script>-->
 </html>
