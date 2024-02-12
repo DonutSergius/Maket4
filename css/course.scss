@@ -1,0 +1,67 @@
+$font-family: 'Open Sans', sans-serif;
+$contentwidth: 1220px;
+
+.course-saction{
+    font-family: $font-family;
+    padding: 15px;
+    margin: 50px auto;
+    width: $contentwidth;
+    text-align: center;
+
+    h1{
+        font-size: 40px;
+    }
+}
+
+
+.course-elem{
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease; 
+}
+.slider-1 {
+    overflow: hidden;
+  }
+  
+
+.course{
+    margin: 15px 20px;
+    text-align: center;
+    color: gray;
+    img{
+        margin-bottom: 10px;
+    }
+
+    hr{
+        border-color: #3c93df;
+        margin: 15px 0px 30px 0px;
+    }
+    h3{
+        font-weight: 900;
+        font-size: 20px;
+    }
+}
+
+.course-result{
+    background-color: #3c93df;
+    font-family: $font-family;
+    padding: 10px;
+}
+
+.statisctic{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 50px auto;
+    width: $contentwidth;
+}
+
+.elem-stat{
+    text-align: center;
+    color: #ffffff;
+    img{
+        height: 60px;
+        width: fit-content;
+        margin: 15px;
+    }
+}

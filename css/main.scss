@@ -6,6 +6,17 @@ body{
     font-size: 16px;
 }
 
+input{
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+input:focus{
+    outline:none;
+    border-color: #3c93df;
+    box-shadow: 0 0 5px #6baae0;
+}
+
 header{
     top:0;
     position: fixed;
@@ -56,19 +67,17 @@ header{
 }
 
 .request-left{
+    font-size: 20px;
     margin-right: auto;
     padding: 15px;
-    align-self: end;
+    align-self: center;
     text-align: center;
     width: 50%;
-    
-    p {
-        padding: 15px;
-    }
 
     h1 {
-        font-weight: bold;
+        font-weight: 900;
         font-size: 35px;
+        padding-bottom: 20px;
     }
 }
 
@@ -76,4 +85,50 @@ header{
     padding: 15px;
     width:50%;
 
+    h2{
+        font-size: 30px;
+        font-weight: 900;
+    }
+}
+
+.reg-button {
+    margin-top: 20px;
+    text-align: center;
+    button{
+        border: 0px;
+        border-radius: 50px;
+        width: 50%;
+        background-color: #3c93df;
+        color: #ffffff;
+        padding: 10px;
+    }
+}
+
+.user-input{
+    padding: 15px 0px;
+    p::after{
+        content: '*';
+        color: red;
+    }
+
+    input{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.right-chekbox{
+    display: inline-block;
+    
+    input:checked{
+        background-color: blue; 
+    }
+
+    a{
+        color: #3c93df;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
 }

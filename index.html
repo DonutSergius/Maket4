@@ -3,9 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/null.css" />
+    <link rel="stylesheet" href="css/course.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
     <title>0xIT</title>
   </head>
   <body>
-    haa
+    <header>
+      <div class="header-content">
+        <img src="img/logo_Oxit.png" alt="logo_Oxit" />
+        <div class="header-right">
+          <button>Головна</button>
+          <button data-section="course" onclick="scrollToSection('course')">
+            Програма курсу
+          </button>
+          <button>Відгук про курс</button>
+          <button>Відео</button>
+          <button data-section="mentor" onclick="scrollToSection('mentor')">
+            Ментори
+          </button>
+          <button data-section="request" onclick="scrollToSection('request')">
+            Подати заявку
+          </button>
+        </div>
+      </div>
+    </header>
+    <section id="request">
+      <div class="request-conteiner">
+        <div class="request-left">
+          <h1>Курси програмування у Луцьку</h1>
+          <p>
+            Сфера ІТ розвивається максимально швидко. Зараз дуже популярно
+            здобувати освіту, що повязана з ІТ. Існує лише одна проблема брак
+            дійсно кваліфікованих спеціалістів в Україні. Під час навчання в
+            університеті ми отримуємо мало практики і "живих", реальних кейсів.
+            ІТ школа ОхІТ створила таку методику навчання, при якій за короткий
+            час ви отримаєте необхідні знання. щоб стати ІТ спеціалістом.
+            Чекаємо вас на нших курсах з програмування в Луцьку. Старт
+            наступного курсу 3 серпня.
+          </p>
+        </div>
+        <div class="request-right">
+          <h2><b>Зареєструватися на курси</b></h2>
+          <div class="user-input">
+            <p>Ім'я</p>
+            <input type="name" placeholder="Ім'я" />
+            <p>Прізвище</p>
+            <input type="SubName" placeholder="Прізвище" />
+            <p>Мене більше цікавить</p>
+            <input type="interest" placeholder="developer or QA " />
+            <p>Номер телефону</p>
+            <input type="tel" placeholder="Номер телефону:-38 XXX XX XX XXX" />
+            <p>Email</p>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div class="right-chekbox">
+            <input type="checkbox" id="trueCheck" /> Я погоджуюся із
+            <a href="#">Політикою Конфедеційності</a>
+          </div>
+          <div class="reg-button">
+            <button>ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="course">
+      <div class="course-saction">
+        <h1>Курс "Розробка свйтів"</h1>
+        <div class="course-elem slider">
+          <div class="course">
+            <img src="img/icons/course-icon-1.png" alt="course-icon-1" />
+            <h3>Розробка сайтів на WordPress</h3>
+            <hr />
+            <p>
+              Курс складається з коротких навчальних відео, на яких ти пізнаєш
+              основи WordPress, навчишся створювати сайти різної складності від
+              блогів до інтернет магазинів. Всі знання закріпиш за допомогою
+              тестових завдань.
+            </p>
+          </div>
+          <div class="course">
+            <img src="img/icons/course-icon-2.png" alt="course-icon-2" />
+            <h3>Розробка сайтів на Drupal 8</h3>
+            <hr />
+            <p>
+              Для створення чудових сайтів на Drupal 8, цеглинка за цеглинкою,
+              ти пізнаєш секрети основних та додаткових Drupal-модулів (Views,
+              Rules, Panels, Devel, Paragraph та багатьох інших).
+            </p>
+          </div>
+          <div class="course">
+            <img src="img/icons/course-icon-3.png" alt="course-icon-3" />
+            <h3>Ознайомлення з тестуванням</h3>
+            <hr />
+            <p>
+              Ти дізнаєшся про забезпечення якості в контексті різних моделей
+              розробки ПЗ. Також QA-спеціаліст розкаже про види тестування
+              (функціональне, регресивне, системне, тестування швидкодії тощо).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="course-result">
+        <div class="statisctic">
+          <div class="elem-stat">
+            <img src="img/icons/statistic-icon-1.png" alt="statistic-icon-1" />
+            <h2>25</h2>
+            <p>курсів організовано</p>
+          </div>
+          <div class="elem-stat">
+            <img src="img/icons/statistic-icon-2.png" alt="statistic-icon-2" />
+            <h2>836</h2>
+            <p>Годин занять проведено</p>
+          </div>
+          <div class="elem-stat">
+            <img src="img/icons/statistic-icon-3.png" alt="statistic-icon-3" />
+            <h2>500</h2>
+            <p>Студентів навчено</p>
+          </div>
+          <div class="elem-stat">
+            <img src="img/icons/statistic-icon-4.png" alt="statistic-icon-4" />
+            <h2>120</h2>
+            <p>Випускників курсів працевлаштовано</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="js/menu.js"></script>
+  <script src="js/course_slider.js"></script>
 </html>
