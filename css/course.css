@@ -1,12 +1,30 @@
 .course-saction {
   font-family: "Open Sans", sans-serif;
   padding: 15px;
-  margin: 50px auto;
+  margin: 50px auto 10px auto;
   width: 1220px;
   text-align: center;
+  height: 500px;
 }
 .course-saction h1 {
   font-size: 40px;
+}
+
+.slider-buttons {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.slider-buttons button {
+  margin: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(155, 154, 154);
+  border-width: 0px;
+  border-radius: 50%;
+}
+.slider-buttons button:hover {
+  background-color: rgb(82, 82, 82);
 }
 
 .course-elem {
@@ -58,6 +76,29 @@
   height: 60px;
   width: fit-content;
   margin: 15px;
+}
+
+@media (max-width: 1250px) {
+  .course-saction {
+    width: 600px;
+  }
+  .course-saction h1 {
+    font-size: 30px;
+  }
+  .course-elem {
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .course-saction {
+    width: 300px;
+    padding: 10px;
+  }
+  .course-saction h1 {
+    font-size: 25px;
+  }
 }
 
 /*# sourceMappingURL=course.css.map */

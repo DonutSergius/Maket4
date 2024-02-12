@@ -1,68 +1,83 @@
- document.addEventListener("DOMContentLoaded", function () {
-      const slider = document.querySelector(".slider-1");
-      const courses = document.querySelectorAll(".course");
-      const container = document.querySelector(".course-elem");
-      var windowWidth = window.innerWidth;
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".slider-1");
+  const courses = document.querySelectorAll(".course");
+  const container = document.querySelector(".course-elem");
+  const sliderButtonsContainer = document.querySelector(".slider-buttons");
+  let currentIndex = 0;
+  let coursesPerPage = 3;
+  let minCount = 3;
 
-      if (windowWidth < 850) {
-        minCount = 2;
+  function updateCoursesPerPage() {
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 1250) {
+      minCount = 3;
+      coursesPerPage = 3;
+    }
+
+    if (windowWidth < 1250) {
+      minCount = 2;
+      coursesPerPage = 2;
+    }
+
+    if (windowWidth < 601) {
+      minCount = 1;
+      coursesPerPage = 1;
+    }
+    if (courses.length > minCount) {
+      sliderButtonsContainer.innerHTML = "";
+      for (let i = 0; i < courses.length; i++) {
+        const button = document.createElement("button");
+        button.textContent = ""; // Тут ви маєте додати текст або номер слайда
+        button.addEventListener("click", () => {
+          currentIndex = i;
+          showCourses();
+        });
+        sliderButtonsContainer.appendChild(button);
       }
+    } else {
+      sliderButtonsContainer.innerHTML = "";
+    }
+  }
 
-      if (windowWidth < 600) {
-        minCount = 1;
-      }
+  function showCourses() {
+    // Очистимо вміст контейнера перед вставкою нових елементів
+    container.innerHTML = "";
 
-      let currentIndex = 0;
-      const coursesPerPage = 3;
+    // Визначимо, які елементи слід вивести
+    const startIndex = currentIndex;
+    const endIndex = (currentIndex + coursesPerPage) % courses.length;
 
-      function showCourses() {
-        // Очистимо вміст контейнера перед вставкою нових елементів
-        container.innerHTML = "";
+    if (startIndex < endIndex) {
+      // Вивести елементи від startIndex до endIndex
+      const visibleCourses = Array.from(courses).slice(startIndex, endIndex);
+      visibleCourses.forEach((course) => {
+        const clonedCourse = course.cloneNode(true);
+        container.appendChild(clonedCourse);
+      });
+    } else {
+      // Вивести елементи від startIndex до кінця і з початку до endIndex
+      const visibleCourses = Array.from(courses)
+        .slice(startIndex)
+        .concat(Array.from(courses).slice(0, endIndex));
+      visibleCourses.forEach((course) => {
+        const clonedCourse = course.cloneNode(true);
+        container.appendChild(clonedCourse);
+      });
+    }
+    const itemWidth = totalWidth / coursesPerPage;
 
-        // Визначимо, які елементи слід вивести
-        const startIndex = currentIndex;
-        const endIndex = (currentIndex + coursesPerPage) % courses.length;
+    slider.style.transition = "transform 0.5s ease-in-out";
+  }
 
-        if (startIndex < endIndex) {
-          // Вивести елементи від startIndex до endIndex
-          const visibleCourses = Array.from(courses).slice(
-            startIndex,
-            endIndex
-          );
-          visibleCourses.forEach((course) => {
-            const clonedCourse = course.cloneNode(true);
-            container.appendChild(clonedCourse);
-          });
-        } else {
-          // Вивести елементи від startIndex до кінця і з початку до endIndex
-          const visibleCourses = Array.from(courses)
-            .slice(startIndex)
-            .concat(Array.from(courses).slice(0, endIndex));
-          visibleCourses.forEach((course) => {
-            const clonedCourse = course.cloneNode(true);
-            container.appendChild(clonedCourse);
-          });
-        }
+  function handleResize() {
+    updateCoursesPerPage();
+    showCourses();
+  }
 
-        const totalWidth = slider.clientWidth;
-        const itemWidth = totalWidth / coursesPerPage;
+  // Додаємо обробник подій для зміни розміру вікна
+  window.addEventListener("resize", handleResize);
 
-        slider.style.transition = "transform 0.5s ease-in-out";
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % courses.length;
-        showCourses();
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + courses.length) % courses.length;
-        showCourses();
-      }
-
-      // Включення слайдера тільки якщо елементів більше 3
-      if (courses.length > minCount) {
-        setInterval(nextSlide, 5000);
-        showCourses(); // Відображення першого слайду
-      }
-    });
+  if (courses.length > minCount) {
+    showCourses(); // Відображення першого слайду
+  }
+});
