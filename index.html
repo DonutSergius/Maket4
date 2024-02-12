@@ -105,22 +105,30 @@
           <h2>Зареєструватися на курси</h2>
           <div class="user-input">
             <p>Ім'я</p>
-            <input type="name" placeholder="Ім'я" />
+            <input type="text" id="nameInput" placeholder="Ім'я" />
             <p>Прізвище</p>
-            <input type="SubName" placeholder="Прізвище" />
+            <input type="text" id="surnameInput" placeholder="Прізвище" />
             <p>Мене більше цікавить</p>
-            <input type="interest" placeholder="developer or QA " />
+            <input
+              type="text"
+              id="interestInput"
+              placeholder="developer or QA"
+            />
             <p>Номер телефону</p>
-            <input type="tel" placeholder="Номер телефону:-38 XXX XX XX XXX" />
+            <input
+              type="tel"
+              id="phoneInput"
+              placeholder="Номер телефону: +38 XXX XX XX XXX"
+            />
             <p>Email</p>
-            <input type="email" placeholder="Email" />
+            <input type="email" id="emailInput" placeholder="Email" />
           </div>
           <div class="right-chekbox">
-            <input type="checkbox" id="trueCheck" /> Я погоджуюся із
-            <a href="#">Політикою Конфедеційності</a>
+            <input type="checkbox" id="privacyCheckbox" /> Я погоджуюся із
+            <a href="#">Політикою Конфіденційності</a>
           </div>
           <div class="reg-button">
-            <button>ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
+            <button onclick="validateForm()">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
           </div>
         </div>
       </div>
@@ -189,5 +197,6 @@
     </section>
   </body>
   <script src="js/menu.js"></script>
+  <script src="js/validation.js"></script>
   <!--  <script src="js/course_slider.js"></script>-->
 </html>
