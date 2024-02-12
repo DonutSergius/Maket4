@@ -10,38 +10,43 @@ function validateForm() {
     if (!nameRegex.test(nameInput.value)) {
         nameInput.setCustomValidity("Ім'я може містити тільки літери");
         error(nameInput);
-        return;
+    } else {
+        clearStyle(nameInput);
     }
 
     if (!nameRegex.test(surnameInput.value)) {
         surnameInput.setCustomValidity("Прізвище може містити тільки літери");
         error(surnameInput);
-        return;
+    } else {
+        clearStyle(surnameInput);
     }
 
-    if(interestInput.value != "developer" || interestInput.value != "QA"){
+    if(interestInput.value !== "developer" && interestInput.value !== "QA"){
         interestInput.setCustomValidity("Напишіть або developer або QA");
         error(interestInput);
-        return;
+    } else {
+        clearStyle(interestInput);
     }
 
     const phoneRegex = /^\+38\d{3}\d{2}\d{2}\d{3}$/;
     if (!phoneRegex.test(phoneInput.value)) {
         phoneInput.setCustomValidity("Формат телефону: +38xxxxxxxxxx");
         error(phoneInput);
-        return;
+    } else {
+        clearStyle(phoneInput);
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value)) {
         emailInput.setCustomValidity("Некоректний формат Email");
         error(emailInput);
-        return;
+    } else {
+        clearStyle(emailInput);
     }
 
     if (!privacyCheckbox.checked) {
-      alert('Будь ласка, погодьтеся з політикою конфіденційності');
-      return;
+        alert('Будь ласка, погодьтеся з політикою конфіденційності');
+        return;
     }
 
     clear(nameInput);
@@ -52,11 +57,11 @@ function validateForm() {
     privacyCheckbox.checked = false;
 
     alert('Форма успішно відправлена!');
-  }
+}
 
-function clear(inputElement){
-    inputElement.value = ''
-    inputElement.style = ".user-input input";
+function clearStyle(inputElement) {
+    inputElement.style.color = "black";
+    inputElement.style.borderColor = "black";
 }
 
 function error(inputElement){
@@ -64,26 +69,22 @@ function error(inputElement){
     inputElement.style.borderColor = "red";
 }
 
-nameInput.addEventListener("focus", function () {
+document.getElementById("nameInput").addEventListener("focus", function () {
     clearStyle(nameInput);
 });
 
-surnameInput.addEventListener("focus", function () {
+document.getElementById("surnameInput").addEventListener("focus", function () {
     clearStyle(surnameInput);
 });
 
-interestInput.addEventListener("focus", function () {
+document.getElementById("interestInput").addEventListener("focus", function () {
     clearStyle(interestInput);
 });
 
-phoneInput.addEventListener("focus", function () {
+document.getElementById("phoneInput").addEventListener("focus", function () {
     clearStyle(phoneInput);
 });
 
-emailInput.addEventListener("focus", function () {
+document.getElementById("emailInput").addEventListener("focus", function () {
     clearStyle(emailInput);
 });
-
-function clearStyle(inputElement) {
-    inputElement.style = ".user-input input";
-}
