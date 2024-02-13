@@ -18,10 +18,12 @@ function changeMenuBackground() {
   const headerButtons = document.querySelectorAll(".header-right button");
   const menuButtons = document.querySelectorAll(".menu button");
 
+  const transitionStyle = "background-color 0.3s ease, color 0.3s ease";
+
   if (window.innerWidth > 900) {
     headerButtons.forEach((button) => {
       const sectionId = button.getAttribute("data-section");
-
+      button.style.transition = transitionStyle;
       if (currentSection === sectionId) {
         button.style.backgroundColor = "#337ab7";
         button.style.color = "#ffffff";
@@ -33,7 +35,7 @@ function changeMenuBackground() {
   } else {
     menuButtons.forEach((button) => {
       const sectionId = button.getAttribute("data-section");
-
+      button.style.transition = transitionStyle;
       if (currentSection === sectionId) {
         button.style.backgroundColor = "#337ab7";
         button.style.color = "#ffffff";

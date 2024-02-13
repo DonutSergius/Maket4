@@ -1,4 +1,5 @@
 .course-saction {
+  background-color: #ffffff;
   font-family: "Open Sans", sans-serif;
   padding: 15px;
   margin: 50px auto 10px auto;
@@ -11,6 +12,7 @@
 }
 
 .slider-buttons {
+  background-color: #ffffff;
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
@@ -79,6 +81,9 @@
 }
 
 @media (max-width: 1250px) {
+  .statisctic {
+    width: 600px;
+  }
   .course-saction {
     width: 600px;
   }
@@ -92,6 +97,20 @@
   }
 }
 @media (max-width: 600px) {
+  .statisctic {
+    justify-content: center;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    width: 300px;
+    padding: 0px;
+  }
+  .elem-stat {
+    width: 135px;
+    font-size: 12px;
+  }
+  .elem-stat img {
+    margin: 5px;
+  }
   .course-saction {
     width: 300px;
     padding: 10px;

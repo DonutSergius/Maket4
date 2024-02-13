@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".slider-1");
   const courses = document.querySelectorAll(".course");
   const container = document.querySelector(".course-elem");
   const sliderButtonsContainer = document.querySelector(".slider-buttons");
@@ -75,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Додаємо обробник подій для зміни розміру вікна
   window.addEventListener("resize", handleResize);
+
+  handleResize();
 
   if (courses.length > minCount) {
     showCourses(); // Відображення першого слайду
