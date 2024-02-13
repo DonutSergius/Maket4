@@ -4,7 +4,7 @@
 
 .qoute-conteiner {
   padding: 15px;
-  padding-top: 60px;
+  padding-top: 100px;
   width: 1220px;
   margin: 0 auto;
   text-align: center;
@@ -54,6 +54,7 @@
   .qoute-conteiner {
     width: 950px;
     height: 350px;
+    padding-top: 30px;
   }
   .qoute-text {
     width: 100%;
