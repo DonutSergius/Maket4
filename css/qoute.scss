@@ -1,0 +1,30 @@
+.qoute-conteiner{
+    padding: 15px;
+    width: 1220px;
+    margin: 50px auto 20px auto;
+    text-align: center;
+
+
+    h1{
+        font-size: 35px;
+    }
+}
+
+.qoute-text {
+    margin: 50px 150px;
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    height: max-content;
+    span{
+        font-size: 40px;
+        color: gray;
+        line-height: 0px;
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+}
+
+#last {
+    align-self: end;
+}

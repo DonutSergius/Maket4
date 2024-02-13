@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
   let coursesPerPage = 3;
   let minCount = 3;
+  let startX;
 
   function updateCoursesPerPage() {
     const windowWidth = window.innerWidth;
+
     if (windowWidth >= 1250) {
       minCount = 3;
       coursesPerPage = 3;
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       minCount = 1;
       coursesPerPage = 1;
     }
+
     if (courses.length > minCount) {
       sliderButtonsContainer.innerHTML = "";
       for (let i = 0; i < courses.length; i++) {
@@ -39,22 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showCourses() {
-    // Очистимо вміст контейнера перед вставкою нових елементів
     container.innerHTML = "";
 
-    // Визначимо, які елементи слід вивести
     const startIndex = currentIndex;
     const endIndex = (currentIndex + coursesPerPage) % courses.length;
 
     if (startIndex < endIndex) {
-      // Вивести елементи від startIndex до endIndex
       const visibleCourses = Array.from(courses).slice(startIndex, endIndex);
       visibleCourses.forEach((course) => {
         const clonedCourse = course.cloneNode(true);
         container.appendChild(clonedCourse);
       });
     } else {
-      // Вивести елементи від startIndex до кінця і з початку до endIndex
       const visibleCourses = Array.from(courses)
         .slice(startIndex)
         .concat(Array.from(courses).slice(0, endIndex));
@@ -72,12 +71,46 @@ document.addEventListener("DOMContentLoaded", function () {
     showCourses();
   }
 
-  // Додаємо обробник подій для зміни розміру вікна
+  function createButtons() {
+    sliderButtonsContainer.innerHTML = "";
+    for (let i = 0; i < courses.length; i++) {
+      const button = document.createElement("button");
+      button.textContent = "";
+      button.addEventListener("click", () => {
+        currentIndex = i;
+        showCourses();
+      });
+      sliderButtonsContainer.appendChild(button);
+    }
+  }
+
+  function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd(e) {
+    const endX = e.changedTouches[0].clientX;
+    const diffX = endX - startX;
+
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        currentIndex = (currentIndex - 1 + courses.length) % courses.length;
+      } else {
+        currentIndex = (currentIndex + 1) % courses.length;
+      }
+
+      showCourses();
+    }
+  }
+
   window.addEventListener("resize", handleResize);
+  container.addEventListener("touchstart", handleTouchStart);
+  container.addEventListener("touchend", handleTouchEnd);
 
   handleResize();
 
   if (courses.length > minCount) {
-    showCourses(); // Відображення першого слайду
+    createButtons();
+    showCourses();
   }
 });
