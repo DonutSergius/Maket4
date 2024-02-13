@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       sliderButtonsContainer.innerHTML = "";
       for (let i = 0; i < courses.length; i++) {
         const button = document.createElement("button");
-        button.textContent = ""; // Тут ви маєте додати текст або номер слайда
+        button.textContent = "";
         button.addEventListener("click", () => {
           currentIndex = i;
           showCourses();
@@ -64,9 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
         container.appendChild(clonedCourse);
       });
     }
-    const itemWidth = totalWidth / coursesPerPage;
 
-    slider.style.transition = "transform 0.5s ease-in-out";
+    container.style.transition = "transform 0.5s ease-in-out";
   }
 
   function handleResize() {

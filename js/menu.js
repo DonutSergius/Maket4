@@ -23,7 +23,7 @@ function changeMenuBackground() {
       const sectionId = button.getAttribute("data-section");
 
       if (currentSection === sectionId) {
-        button.style.backgroundColor = "#68b7fd";
+        button.style.backgroundColor = "#337ab7";
         button.style.color = "#ffffff";
       } else {
         button.style.backgroundColor = "";
@@ -35,7 +35,7 @@ function changeMenuBackground() {
       const sectionId = button.getAttribute("data-section");
 
       if (currentSection === sectionId) {
-        button.style.backgroundColor = "#68b7fd";
+        button.style.backgroundColor = "#337ab7";
         button.style.color = "#ffffff";
       } else {
         button.style.backgroundColor = "";

@@ -3,6 +3,7 @@ body {
   font-size: 16px;
   width: 100vw;
   height: 100vh;
+  background-color: #f7f7f7;
 }
 
 input {
@@ -97,7 +98,7 @@ header button:hover {
   border: 0px;
   border-radius: 50px;
   width: 50%;
-  background-color: #3c93df;
+  background-color: #337ab7;
   color: #ffffff;
   padding: 10px;
 }
@@ -119,7 +120,7 @@ header button:hover {
   display: inline-block;
 }
 .right-chekbox input:checked {
-  background-color: blue;
+  background-color: 337ab7;
 }
 .right-chekbox a {
   color: #3c93df;
@@ -173,7 +174,7 @@ header button:hover {
   width: 50px;
   height: 40px;
   border-radius: 10px;
-  background-color: #3c93df;
+  background-color: #337ab7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,7 +254,7 @@ header button:hover {
     border: 0px;
     border-radius: 50px;
     width: 100%;
-    background-color: #3c93df;
+    background-color: #337ab7;
     color: #ffffff;
     padding: 10px;
   }

@@ -59,9 +59,13 @@ function validateForm() {
     alert('Форма успішно відправлена!');
 }
 
+function clear(inputElement){
+    inputElement.value = "";
+    inputElement.style = ".user-input input"
+}
+
 function clearStyle(inputElement) {
-    inputElement.style.color = "black";
-    inputElement.style.borderColor = "black";
+    inputElement.style = ".user-input input"
 }
 
 function error(inputElement){
