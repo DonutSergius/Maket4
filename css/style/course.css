@@ -1,3 +1,7 @@
+#course {
+  background-color: #ffffff;
+}
+
 .course-saction {
   font-family: "Open Sans", sans-serif;
   padding: 15px;
@@ -31,10 +35,6 @@
   display: flex;
   justify-content: center;
   transition: transform 0.5s ease;
-}
-
-.slider-1 {
-  overflow: hidden;
 }
 
 .course {
@@ -82,6 +82,9 @@
   .statisctic {
     width: 600px;
   }
+  .course-result {
+    padding: 0px;
+  }
   .course-saction {
     width: 600px;
   }
@@ -99,7 +102,7 @@
     justify-content: center;
     margin: 10px auto;
     flex-wrap: wrap;
-    width: 300px;
+    width: 280px;
     padding: 0px;
   }
   .elem-stat {
@@ -109,8 +112,11 @@
   .elem-stat img {
     margin: 5px;
   }
+  .course {
+    margin: 0px;
+  }
   .course-saction {
-    width: 300px;
+    width: 280px;
     padding: 10px;
   }
   .course-saction h1 {

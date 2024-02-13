@@ -334,12 +334,21 @@ header{
 
 @media(max-width: 600){
     .request-left{
+        padding: 10px;
         p{
             font-size: 14px;
         }
         h1{
             font-size: 20px;
         }
+    }
+
+    .request-conteiner{
+        padding: 10px;
+    }
+
+    .request-right{
+        padding: 10px;
     }
 
 }

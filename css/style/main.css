@@ -308,11 +308,20 @@ header button:hover {
   }
 }
 @media (max-width: 600) {
+  .request-left {
+    padding: 10px;
+  }
   .request-left p {
     font-size: 14px;
   }
   .request-left h1 {
     font-size: 20px;
+  }
+  .request-conteiner {
+    padding: 10px;
+  }
+  .request-right {
+    padding: 10px;
   }
 }
 

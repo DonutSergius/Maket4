@@ -1,6 +1,10 @@
 $font-family: 'Open Sans', sans-serif;
 $contentwidth: 1220px;
 
+#course{
+    background-color: #ffffff;
+}
+
 .course-saction{
     font-family: $font-family;
     padding: 15px;
@@ -35,11 +39,7 @@ $contentwidth: 1220px;
     display: flex;
     justify-content: center;
     transition: transform 0.5s ease; 
-}
-.slider-1 {
-    overflow: hidden;
-  }
-  
+}  
 
 .course{
     margin: 15px 20px;
@@ -88,10 +88,11 @@ $contentwidth: 1220px;
     .statisctic{
         width:600px;
     }
-
+    .course-result{
+        padding: 0px;
+    }
     .course-saction {
         width: 600px;
-
         h1{
             font-size: 30px;
         }
@@ -109,7 +110,7 @@ $contentwidth: 1220px;
         justify-content: center;
         margin: 10px auto;
         flex-wrap: wrap;
-        width: 300px;
+        width: 280px;
         padding: 0px;
     }
 
@@ -121,8 +122,13 @@ $contentwidth: 1220px;
         }
     }
 
+    .course{
+        margin: 0px;
+    }
+    
+
     .course-saction{
-        width:300px;
+        width:280px;
         padding: 10px;
 
         h1{

@@ -1,5 +1,5 @@
 function getCurrentSection() {
-  const headerHeight = 150; // Розмір вашого header
+  const headerHeight = 200; // Розмір вашого header
   const sections = document.querySelectorAll("section");
   let currentSection = null;
 
