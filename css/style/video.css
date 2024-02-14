@@ -1,6 +1,9 @@
 #video {
   background-color: #f7f7f7;
 }
+#video p {
+  color: gray;
+}
 #video .video-content {
   width: 1220px;
   margin: 0 auto;
@@ -12,6 +15,7 @@
 #video .video-content .title-dis h1 {
   font-weight: 900;
   font-size: 40px;
+  padding-top: 20px;
 }
 #video .video-content .title-dis p {
   padding-top: 15px;

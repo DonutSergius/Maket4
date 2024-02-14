@@ -1,6 +1,9 @@
 #markCurse {
   background-color: #ffffff;
 }
+#markCurse p {
+  color: grey;
+}
 #markCurse .qoute-conteiner {
   padding: 15px;
   padding-top: 100px;

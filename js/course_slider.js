@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateCoursesPerPage() {
     const windowWidth = window.innerWidth;
 
-    if (windowWidth >= 1250) {
+    if (windowWidth > 1250) {
       minCount = 3;
       coursesPerPage = 3;
     }
 
-    if (windowWidth < 1250) {
+    if (windowWidth <= 1250) {
       minCount = 2;
       coursesPerPage = 2;
     }

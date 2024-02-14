@@ -76,6 +76,9 @@ header .header-content .header-right {
   text-align: center;
   width: 50%;
 }
+#request .request-conteiner .request-left p {
+  color: gray;
+}
 #request .request-conteiner .request-left h1 {
   font-weight: 900;
   font-size: 35px;

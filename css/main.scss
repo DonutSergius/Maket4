@@ -63,7 +63,6 @@ header{
 
 #request{
     background-color: #f7f7f7;
-
     .request-conteiner{
         margin: 0 auto;
         width: $contentwidth;
@@ -78,7 +77,9 @@ header{
             align-self: center;
             text-align: center;
             width: 50%;
-        
+            p{
+                color: gray;
+            }
             h1 {
                 font-weight: 900;
                 font-size: 35px;
