@@ -60,15 +60,17 @@ $contentwidth: 1220px;
 }
 
 .course-result{
+    padding:20px 0px ;
     background-color: #3c93df;
     font-family: $font-family;
+    
 }
 
 .statisctic{
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    margin: 50px auto;
+    margin: 0px auto;
     width: $contentwidth;
 }
 

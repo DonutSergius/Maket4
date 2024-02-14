@@ -5,6 +5,7 @@
   width: 1220px;
   margin: 0 auto;
   padding: 15px;
+  padding-top: 50px;
   margin-top: 30px;
 }
 #mentor .mentors-conteiner h1 {
@@ -53,6 +54,7 @@
   #mentor .mentors-conteiner {
     width: 600px;
     padding: 10px;
+    padding-top: 25px;
   }
   #mentor .mentors-conteiner .mentors-elem {
     display: block;
