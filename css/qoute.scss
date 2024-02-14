@@ -1,100 +1,114 @@
 #markCurse{
     background-color: #ffffff;
-}
 
-.qoute-conteiner{
-    padding: 15px;
-    padding-top: 100px;
-    width: 1220px;
-    margin: 0 auto;
-    text-align: center;
-    height: 350px;
+    .qoute-conteiner{
+        padding: 15px;
+        padding-top: 100px;
+        width: 1220px;
+        margin: 0 auto;
+        text-align: center;
+        height: 350px;
+    
+        h1{
+            font-size: 35px;
+        }
 
-    h1{
-        font-size: 35px;
+        .qoute-list{
+            .qoute-elem{
+                .qoute-text {
+                    margin: 50px 150px;
+                    position: relative;
+                    display: flex;
+                    font-size: 20px;
+                    span{
+                        font-size: 40px;
+                        color: gray;
+                        line-height: 0px;
+                        font-weight: 900;
+                        letter-spacing: 1px;
+                    }
+                    #last {
+                        align-self: end;
+                    }
+                }
+            }
+        }
     }
-}
-
-.qoute-text {
-    margin: 50px 150px;
-    position: relative;
-    display: flex;
-    font-size: 20px;
-    span{
-        font-size: 40px;
-        color: gray;
-        line-height: 0px;
-        font-weight: 900;
-        letter-spacing: 1px;
-    }
-}
-
-#last {
-    align-self: end;
-}
-
-.qoute-buttons{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 50px;
-    button{
-        margin: 5px;
-        width: 10px;
-        height: 10px;
-        background-color: rgb(155, 154, 154);
-        border-width: 0px;
-        border-radius: 50%;
-
-        &:hover{
-            background-color: rgb(82, 82, 82);
+    .qoute-buttons{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 50px;
+        button{
+            margin: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(155, 154, 154);
+            border-width: 0px;
+            border-radius: 50%;
+    
+            &:hover{
+                background-color: rgb(82, 82, 82);
+            }
         }
     }
 }
 
-@media(max-width: 1250px){
-    .qoute-conteiner{
-        width:950px;
-        height: 350px;
-        padding-top: 30px;
-    }
 
-    .qoute-text{
-        width: 100%;
-        margin: 30px auto;
+@media(max-width: 1250px){
+    #markCurse{
+        .qoute-conteiner{
+            width:950px;
+            height: 350px;
+            padding-top: 30px;
+            .qoute-list{
+                .qoute-elem{
+                    .qoute-text{
+                        width: 100%;
+                        margin: 30px auto;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media(max-width: 980px){
-    .qoute-conteiner{
-        width:600px;
-        height: 250px;
-        padding: 10px;
-        h1{
-            font-size: 26px;
+    #markCurse{
+        .qoute-conteiner{
+            width:600px;
+            height: 250px;
+            padding: 10px;
+            .qoute-list{
+                .qoute-elem{
+                    .qoute-text{
+                        font-size: 14px;
+                        margin: 10px auto;
+                    }
+                }
+            }
         }
-    }
-
-    .qoute-text{
-        font-size: 14px;
-        margin: 10px auto;
     }
 }
 
 @media(max-width: 640px){
-    .qoute-conteiner{
-        width: 280px;
-        height: 325px;
-        padding: 10px;
-        h1{
-            font-size: 22px;
+    #markCurse{
+        .qoute-conteiner{
+            width: 280px;
+            height: 325px;
+            padding: 10px;
+            padding-top: 20px;
+            h1{
+                font-size: 22px;
+            }
+            .qoute-list{
+                .qoute-elem{
+                    .qoute-text{
+                        font-size: 12px;
+                        margin: 10px auto;
+                    }
+                }
+            }
         }
     }
-
-    .qoute-text{
-        font-size: 12px;
-        margin: 10px auto;
-    }
-
-
 }

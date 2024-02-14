@@ -1,7 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  background-color: #f7f7f7;
 }
 
 input {
@@ -13,6 +12,11 @@ input:focus {
   outline: none;
   border-color: #3c93df;
   box-shadow: 0 0 5px #6baae0;
+}
+
+#main {
+  background-color: #f7f7f7;
+  height: 100px;
 }
 
 header {
@@ -37,39 +41,34 @@ header button:hover {
   background-color: rgba(104, 183, 253, 0.3764705882);
   color: #3c93df;
 }
-
-.header-content {
+header .header-content {
   padding: 15px;
   width: 1220px;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
-
-.header-content img {
+header .header-content img {
   width: 70px;
   height: 70px;
   padding: 0;
 }
-
-.header-right {
+header .header-content .header-right {
   margin-left: auto;
   font-size: 0px;
 }
 
-.request-conteiner {
+#request {
+  background-color: #f7f7f7;
+}
+#request .request-conteiner {
   margin: 0 auto;
   width: 1220px;
   display: flex;
-  margin-top: 50px;
   padding: 15px;
+  padding-top: 30px;
 }
-
-#main {
-  height: 100px;
-}
-
-.request-left {
+#request .request-conteiner .request-left {
   font-size: 20px;
   margin-right: auto;
   padding: 15px;
@@ -77,26 +76,48 @@ header button:hover {
   text-align: center;
   width: 50%;
 }
-.request-left h1 {
+#request .request-conteiner .request-left h1 {
   font-weight: 900;
   font-size: 35px;
   padding-bottom: 20px;
 }
-
-.request-right {
+#request .request-conteiner .request-right {
   padding: 15px;
   width: 50%;
 }
-.request-right h2 {
+#request .request-conteiner .request-right h2 {
   font-size: 30px;
   font-weight: 900;
 }
-
-.reg-button {
+#request .request-conteiner .request-right .user-input {
+  padding: 15px 0px;
+}
+#request .request-conteiner .request-right .user-input p::after {
+  content: "*";
+  color: red;
+}
+#request .request-conteiner .request-right .user-input input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+#request .request-conteiner .request-right .right-chekbox {
+  display: inline-block;
+}
+#request .request-conteiner .request-right .right-chekbox input:checked {
+  background-color: 337ab7;
+}
+#request .request-conteiner .request-right .right-chekbox a {
+  color: #3c93df;
+}
+#request .request-conteiner .request-right .right-chekbox a:hover {
+  text-decoration: underline;
+}
+#request .request-conteiner .request-right .reg-button {
   margin-top: 20px;
   text-align: center;
 }
-.reg-button button {
+#request .request-conteiner .request-right .reg-button button {
   border: 0px;
   border-radius: 50px;
   width: 50%;
@@ -105,49 +126,18 @@ header button:hover {
   padding: 10px;
 }
 
-.user-input {
-  padding: 15px 0px;
-}
-.user-input p::after {
-  content: "*";
-  color: red;
-}
-.user-input input {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-}
-
-.right-chekbox {
-  display: inline-block;
-}
-.right-chekbox input:checked {
-  background-color: 337ab7;
-}
-.right-chekbox a {
-  color: #3c93df;
-}
-.right-chekbox a:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 1250px) {
   header {
-    width: 100%;
     margin: 0px;
   }
-  .header-right {
-    margin: 0px auto;
-  }
-  .header-content {
+  header .header-content {
     margin: 0 auto;
-    width: 100%;
+    width: 900px;
   }
-  .request-conteiner {
+  #request .request-conteiner {
     margin: 0 auto;
     width: 900px;
     padding: 0px;
-    margin-top: 100px;
   }
 }
 .menu {
@@ -178,7 +168,7 @@ header button:hover {
   height: 40px;
   border-radius: 10px;
   background-color: #337ab7;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -222,38 +212,33 @@ header button:hover {
   margin-top: 8px;
 }
 
-.backcolor {
-  display: none;
-}
-
-@media (max-width: 900px) {
-  .request-conteiner {
+@media (max-width: 930px) {
+  #request .request-conteiner {
     display: contents;
   }
-  .request-left {
+  #request .request-conteiner .request-left {
     width: 90%;
     margin: 0 auto;
-    margin-top: 70px;
   }
-  .request-left p {
+  #request .request-conteiner .request-left p {
     font-size: 16px;
   }
-  .request-left h1 {
+  #request .request-conteiner .request-left h1 {
     font-size: 24px;
   }
-  .request-right {
+  #request .request-conteiner .request-right {
     width: 90%;
     margin: 0 auto;
   }
-  .request-right h2 {
+  #request .request-conteiner .request-right h2 {
     font-size: 22px;
     font-weight: 900;
   }
-  .reg-button {
+  #request .request-conteiner .request-right .reg-button {
     margin-top: 20px;
     text-align: center;
   }
-  .reg-button button {
+  #request .request-conteiner .request-right .reg-button button {
     border: 0px;
     border-radius: 50px;
     width: 100%;
@@ -261,19 +246,19 @@ header button:hover {
     color: #ffffff;
     padding: 10px;
   }
-  .header-right {
-    display: none;
+  header {
+    height: 75px;
   }
-  .header-content {
+  header .header-content {
     width: 90vw;
     justify-content: space-between;
   }
-  .header-content img {
+  header .header-content img {
     width: 50px;
     height: 50px;
   }
-  header {
-    height: 75px;
+  header .header-content .header-right {
+    display: none;
   }
   .menu-button-container, .backcolor {
     display: flex;
@@ -312,19 +297,19 @@ header button:hover {
   }
 }
 @media (max-width: 600) {
-  .request-left {
+  #request .request-conteiner {
     padding: 10px;
   }
-  .request-left p {
+  #request .request-conteiner .request-left {
+    padding: 10px;
+  }
+  #request .request-conteiner .request-left p {
     font-size: 14px;
   }
-  .request-left h1 {
+  #request .request-conteiner .request-left h1 {
     font-size: 20px;
   }
-  .request-conteiner {
-    padding: 10px;
-  }
-  .request-right {
+  #request .request-conteiner .request-right {
     padding: 10px;
   }
 }
