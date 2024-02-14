@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const courses = document.querySelectorAll(".qoute-elem");
-    const container = document.querySelector(".qoute-list");
-    const sliderButtonsContainer = document.querySelector(".qoute-buttons");
+    const courses = document.querySelectorAll(".mentors-elem");
+    const container = document.querySelector(".mentors-list");
+    const sliderButtonsContainer = document.querySelector(".mentors-buttons");
     let currentIndex = 0;
     let coursesPerPage = 1;
     let startX;
@@ -50,25 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleTouchStart(e) {
-        startX = e.touches[0].clientX;
-        clearInterval(intervalId); 
-    }
-
-    function handleTouchEnd(e) {
-        const endX = e.changedTouches[0].clientX;
-        const diffX = endX - startX;
-
-        if (Math.abs(diffX) > 50) {
-            if (diffX > 0) {
-                currentIndex = (currentIndex - 1 + courses.length) % courses.length;
-            } else {
-                currentIndex = (currentIndex + 1) % courses.length;
-            }
-
-            container.style.opacity = 0;
-            setTimeout(showCourses, 500);
+        if (e.touches && e.touches.length > 0) {
+            startX = e.touches[0].clientX;
+            clearInterval(intervalId);
         }
     }
+    
+    function handleTouchEnd(e) {
+        if (e.changedTouches && e.changedTouches.length > 0) {
+            const endX = e.changedTouches[0].clientX;
+            const diffX = endX - startX;
+    
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    currentIndex = (currentIndex - 1 + courses.length) % courses.length;
+                } else {
+                    currentIndex = (currentIndex + 1) % courses.length;
+                }
+    
+                container.style.opacity = 0;
+                setTimeout(showCourses, 500);
+            }
+        }
+    }
+    
     container.addEventListener("touchstart", handleTouchStart);
     container.addEventListener("touchend", handleTouchEnd);
 

@@ -1,0 +1,105 @@
+#mentor{
+    background-color: #ffffff;
+
+
+    .mentors-conteiner{
+        width:1220px;
+        margin: 0 auto;
+        padding: 15px;
+        h1{
+            text-align: center;
+            font-weight: 900;
+            font-size: 40px;
+        }
+        margin-top: 30px;
+
+        .mentors-elem{
+            display: flex;
+            img{
+                margin: 10px 100px auto 75px;
+            }
+        
+            .mentor-dis{
+                p{
+                    margin: 20px 0px;
+                }
+                #mentor_name{
+                    color: #3c93df;
+                    font-family: 'PT Open Sans', sans-serif;
+                    font-weight: 500;
+                    margin: 30px 0px;
+                }
+            }
+        }
+
+        .mentors-buttons{
+            width: 100%;
+            text-align: center;
+            padding-bottom: 50px;
+            button{
+                margin: 5px;
+                width: 10px;
+                height: 10px;
+                background-color: rgb(155, 154, 154);
+                border-width: 0px;
+                border-radius: 50%;
+        
+                &:hover{
+                    background-color: rgb(82, 82, 82);
+                }
+            }
+        }
+        
+    }
+}
+
+@media(max-width:1250px){
+    #mentor{
+        .mentors-conteiner{
+            width: 900px;
+        }
+    }
+}
+
+@media(max-width: 930px) {
+    #mentor{
+        .mentors-conteiner{
+            width:600px;
+            padding: 10px;
+            .mentors-elem{
+                display: block;
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 620px){
+    #mentor{
+        .mentors-conteiner{
+            width:280px;
+            text-align: center;
+            h1{
+                font-size: 24px;
+            }
+            .mentors-list{
+                margin-top: 20px;
+            }
+            .mentors-elem{
+                img{
+                    width: 150px;
+                    height: 150px;
+                }
+                .mentor-dis{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

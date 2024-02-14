@@ -62,7 +62,6 @@ $contentwidth: 1220px;
 .course-result{
     background-color: #3c93df;
     font-family: $font-family;
-    padding: 10px;
 }
 
 .statisctic{
@@ -87,12 +86,14 @@ $contentwidth: 1220px;
 
     .statisctic{
         width:600px;
+        padding: 10px;
     }
     .course-result{
         padding: 0px;
     }
     .course-saction {
         width: 600px;
+        padding: 10px;
         h1{
             font-size: 30px;
         }

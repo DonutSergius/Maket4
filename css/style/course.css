@@ -57,7 +57,6 @@
 .course-result {
   background-color: #3c93df;
   font-family: "Open Sans", sans-serif;
-  padding: 10px;
 }
 
 .statisctic {
@@ -81,12 +80,14 @@
 @media (max-width: 1250px) {
   .statisctic {
     width: 600px;
+    padding: 10px;
   }
   .course-result {
     padding: 0px;
   }
   .course-saction {
     width: 600px;
+    padding: 10px;
   }
   .course-saction h1 {
     font-size: 30px;

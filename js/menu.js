@@ -51,7 +51,7 @@ function changeMenuBackground() {
 document.addEventListener("scroll", changeMenuBackground);
 
 function scrollToSection(sectionId) {
-  const headerHeight = 150; // Розмір вашого header
+  const headerHeight = 100; // Розмір вашого header
   const section = document.getElementById(sectionId);
 
   if (section) {
