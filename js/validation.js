@@ -7,16 +7,20 @@ function validateForm() {
     const privacyCheckbox = document.getElementById('privacyCheckbox');
 
     const nameRegex = /^[^\d]+$/;
-    if (!nameRegex.test(nameInput.value)) {
+    var isValid = true;
+
+    if (!nameRegex.test(nameInput.value) || nameInput.value == "") {
         nameInput.setCustomValidity("Ім'я може містити тільки літери");
         error(nameInput);
+        isValid = false;
     } else {
         clearStyle(nameInput);
     }
 
-    if (!nameRegex.test(surnameInput.value)) {
+    if (!nameRegex.test(surnameInput.value) || surnameInput.value == "") {
         surnameInput.setCustomValidity("Прізвище може містити тільки літери");
         error(surnameInput);
+        isValid = false;
     } else {
         clearStyle(surnameInput);
     }
@@ -24,22 +28,25 @@ function validateForm() {
     if(interestInput.value !== "developer" && interestInput.value !== "QA"){
         interestInput.setCustomValidity("Напишіть або developer або QA");
         error(interestInput);
+        isValid = false;
     } else {
         clearStyle(interestInput);
     }
 
     const phoneRegex = /^\+38\d{3}\d{2}\d{2}\d{3}$/;
-    if (!phoneRegex.test(phoneInput.value)) {
+    if (!phoneRegex.test(phoneInput.value) || phoneInput.value =="") {
         phoneInput.setCustomValidity("Формат телефону: +38xxxxxxxxxx");
         error(phoneInput);
+        isValid = false;
     } else {
         clearStyle(phoneInput);
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailInput.value)) {
+    if (!emailRegex.test(emailInput.value) || emailInput.value == "") {
         emailInput.setCustomValidity("Некоректний формат Email");
         error(emailInput);
+        isValid = false;
     } else {
         clearStyle(emailInput);
     }
@@ -49,14 +56,16 @@ function validateForm() {
         return;
     }
 
-    clear(nameInput);
-    clear(surnameInput);
-    clear(interestInput);
-    clear(phoneInput);
-    clear(emailInput);
-    privacyCheckbox.checked = false;
 
-    alert('Форма успішно відправлена!');
+    if( isValid ) {
+        alert('Форма успішно відправлена!');
+        clear(nameInput);
+        clear(surnameInput);
+        clear(interestInput);
+        clear(phoneInput);
+        clear(emailInput);
+        privacyCheckbox.checked = false;
+    }
 }
 
 function clear(inputElement){
@@ -66,11 +75,13 @@ function clear(inputElement){
 
 function clearStyle(inputElement) {
     inputElement.style = ".user-input input"
+    isValid = true;
 }
 
 function error(inputElement){
     inputElement.style.color = "red";
     inputElement.style.borderColor = "red";
+    isValid = false;
 }
 
 document.getElementById("nameInput").addEventListener("focus", function () {
