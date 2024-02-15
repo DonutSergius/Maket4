@@ -63,6 +63,9 @@ footer a:hover {
     flex-wrap: wrap;
     width: 280px;
   }
+  #contacts .contacts-container .contacts-list h2 {
+    font-size: 16px;
+  }
   #contacts .contacts-container .contacts-list .elem-contacts {
     width: 135px;
     font-size: 12px;
