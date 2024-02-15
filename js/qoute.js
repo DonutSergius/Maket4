@@ -10,6 +10,21 @@ document.addEventListener("DOMContentLoaded", function () {
     function showCourses() {
         container.innerHTML = "";
 
+
+        if (currentIndex - 1 < 0) {
+            document.getElementById(`q${courses.length - 1}`).style.backgroundColor = "grey";
+          } else {
+            document.getElementById(`q${currentIndex - 1}`).style.backgroundColor = "grey";
+          }
+    
+          document.getElementById(`q${currentIndex}`).style.backgroundColor = "black";
+    
+          if (currentIndex + 1 >= courses.length) {
+            document.getElementById(`q${0}`).style.backgroundColor = "grey";
+          } else {
+            document.getElementById(`q${currentIndex + 1}`).style.backgroundColor = "grey";
+          }
+
         const startIndex = currentIndex;
         const endIndex = (currentIndex + coursesPerPage) % courses.length;
 
@@ -37,17 +52,36 @@ document.addEventListener("DOMContentLoaded", function () {
     function createButtons() {
         sliderButtonsContainer.innerHTML = "";
         for (let i = 0; i < courses.length; i++) {
-            const button = document.createElement("button");
-            button.textContent = "";
-            button.addEventListener("click", () => {
-                clearInterval(intervalId); 
-                currentIndex = i;
-                container.style.opacity = 0; 
-                setTimeout(showCourses, 500); 
-            });
-            sliderButtonsContainer.appendChild(button);
+          const button = document.createElement("button");
+          button.textContent = "";
+          button.id = `q${i}`;
+          button.addEventListener("click", () => {
+            clearInterval(intervalId);
+            currentIndex = i;
+            console.log("currentIndex:", currentIndex);
+      
+            if (currentIndex - 1 < 0) {
+              document.getElementById(`q${courses.length - 1}`).style.backgroundColor = "grey";
+            } else {
+              document.getElementById(`q${currentIndex - 1}`).style.backgroundColor = "grey";
+            }
+      
+            document.getElementById(`q${currentIndex}`).style.backgroundColor = "black";
+      
+            if (currentIndex + 1 >= courses.length) {
+              document.getElementById(`q${0}`).style.backgroundColor = "grey";
+            } else {
+              document.getElementById(`q${currentIndex + 1}`).style.backgroundColor = "grey";
+            }
+      
+            container.style.opacity = 0;
+            setTimeout(showCourses, 500);
+          });
+          sliderButtonsContainer.appendChild(button);
         }
-    }
+      }
+      
+      
 
     function handleTouchStart(e) {
         startX = e.touches[0].clientX;

@@ -32,20 +32,48 @@ document.addEventListener("DOMContentLoaded", function () {
         button.textContent = "";
         button.addEventListener("click", () => {
           currentIndex = i;
+          console.log("currentIndex:", currentIndex);
+          if (currentIndex - 1 < 0) {
+            document.getElementById('c' + (courses.length - 1)).style.backgroundColor = "grey";
+          } else {
+            document.getElementById('c' + (currentIndex - 1)).style.backgroundColor = "grey";
+          }
+          
+          document.getElementById('c' + currentIndex).style.backgroundColor = "black";
+          
+          if (currentIndex + 1 >= courses.length) {
+            document.getElementById('c' + 0).style.backgroundColor = "grey";
+          } else {
+            document.getElementById('c' + (currentIndex + 1)).style.backgroundColor = "grey";
+          }
           showCourses();
         });
+        button.id = `c${i}`;
         sliderButtonsContainer.appendChild(button);
       }
     } else {
       sliderButtonsContainer.innerHTML = "";
     }
-  }
+}    
 
   function showCourses() {
     container.innerHTML = "";
-
     const startIndex = currentIndex;
     const endIndex = (currentIndex + coursesPerPage) % courses.length;
+
+    if (currentIndex - 1 < 0) {
+      document.getElementById('c' + (courses.length - 1)).style.backgroundColor = "grey";
+    } else {
+      document.getElementById('c' + (currentIndex - 1)).style.backgroundColor = "grey";
+    }
+    
+    document.getElementById('c' + currentIndex).style.backgroundColor = "black";
+    
+    if (currentIndex + 1 >= courses.length) {
+      document.getElementById('c' + 0).style.backgroundColor = "grey";
+    } else {
+      document.getElementById('c' + (currentIndex + 1)).style.backgroundColor = "grey";
+    }
 
     if (startIndex < endIndex) {
       const visibleCourses = Array.from(courses).slice(startIndex, endIndex);
@@ -60,7 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
       visibleCourses.forEach((course) => {
         const clonedCourse = course.cloneNode(true);
         container.appendChild(clonedCourse);
-      });
+      });        
+
     }
 
     container.style.transition = "transform 0.5s ease-in-out";
@@ -69,19 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleResize() {
     updateCoursesPerPage();
     showCourses();
-  }
-
-  function createButtons() {
-    sliderButtonsContainer.innerHTML = "";
-    for (let i = 0; i < courses.length; i++) {
-      const button = document.createElement("button");
-      button.textContent = "";
-      button.addEventListener("click", () => {
-        currentIndex = i;
-        showCourses();
-      });
-      sliderButtonsContainer.appendChild(button);
-    }
   }
 
   function handleTouchStart(e) {
