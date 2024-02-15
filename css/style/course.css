@@ -60,13 +60,13 @@
 }
 #course .course-result .statisctic {
   display: flex;
-  justify-content: space-between;
   padding: 15px;
   margin: 0px auto;
   width: 1220px;
   box-sizing: border-box;
 }
 #course .course-result .statisctic .elem-stat {
+  width: 300px;
   text-align: center;
   color: #ffffff;
 }

@@ -69,13 +69,13 @@ $contentwidth: 1220px;
         
         .statisctic{
             display: flex;
-            justify-content: space-between;
             padding: 15px;
             margin: 0px auto;
             width: $contentwidth;
             box-sizing: border-box;
 
             .elem-stat{
+                width:300px;
                 text-align: center;
                 color: #ffffff;
                 img{

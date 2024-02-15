@@ -8,12 +8,12 @@
         .contacts-list{
             box-sizing: border-box;
             display: flex;
-            justify-content: space-between;
             padding: 15px;
             margin: 0px auto;
             width: 1220px;
 
             .elem-contacts{
+                width:300px;
                 text-align: center;
                 color: #ffffff;
                 p{
