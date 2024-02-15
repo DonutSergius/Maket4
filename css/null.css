@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+button{
+    cursor: pointer;
+}
+
 /* Зберігає стандартний вигляд форми */
 button, input, select, textarea {
     font-family: inherit;
