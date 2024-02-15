@@ -30,10 +30,10 @@ header {
 }
 header button {
   background-color: #ffffff;
-  margin: 0;
+  margin: 5px;
   padding: 10px 20px;
   border-radius: 70px;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
   box-shadow: none;
 }
@@ -43,15 +43,15 @@ header button:hover {
 }
 header .header-content {
   box-sizing: border-box;
-  padding: 15px;
+  padding: 6px 0px;
   width: 1220px;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
 header .header-content img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   padding: 0;
 }
 header .header-content .header-right {
@@ -71,31 +71,41 @@ header .header-content .header-right {
   padding-top: 30px;
 }
 #request .request-conteiner .request-left {
-  font-size: 20px;
   margin-right: auto;
   padding: 15px;
-  align-self: center;
+  align-self: end;
   text-align: center;
   width: 50%;
 }
 #request .request-conteiner .request-left p {
   color: gray;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  font-size: 18px;
 }
 #request .request-conteiner .request-left h1 {
-  font-weight: 900;
-  font-size: 35px;
-  padding-bottom: 20px;
+  color: rgb(65, 65, 65);
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 34px;
 }
 #request .request-conteiner .request-right {
   padding: 15px;
   width: 50%;
 }
 #request .request-conteiner .request-right h2 {
-  font-size: 30px;
-  font-weight: 900;
+  color: rgb(65, 65, 65);
+  font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 #request .request-conteiner .request-right .user-input {
-  padding: 15px 0px;
+  padding: 10px 0px;
+}
+#request .request-conteiner .request-right .user-input p {
+  color: rgb(65, 65, 65);
+  padding: 5px 0px;
 }
 #request .request-conteiner .request-right .user-input p::after {
   content: "*";
@@ -118,19 +128,18 @@ header .header-content .header-right {
 #request .request-conteiner .request-right .right-chekbox a:hover {
   text-decoration: underline;
 }
-#request .request-conteiner .request-right .reg-button {
-  margin-top: 20px;
+#request .request-conteiner .reg-button {
   text-align: center;
 }
-#request .request-conteiner .request-right .reg-button button {
+#request .request-conteiner .reg-button button {
   border: 0px;
   border-radius: 50px;
-  width: 50%;
+  width: 70%;
   background-color: #337ab7;
   color: #ffffff;
   padding: 10px;
 }
-#request .request-conteiner .request-right .reg-button button:hover {
+#request .request-conteiner .reg-button button:hover {
   background-color: #0f5694;
 }
 
@@ -240,13 +249,13 @@ header .header-content .header-right {
   }
   #request .request-conteiner .request-right h2 {
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 600;
   }
-  #request .request-conteiner .request-right .reg-button {
+  #request .request-conteiner .reg-button {
     margin-top: 20px;
     text-align: center;
   }
-  #request .request-conteiner .request-right .reg-button button {
+  #request .request-conteiner .reg-button button {
     border: 0px;
     border-radius: 50px;
     width: 100%;
@@ -307,21 +316,42 @@ header .header-content .header-right {
     background-color: white;
   }
 }
-@media (max-width: 600) {
+@media (max-width: 600px) {
+  header .header-content {
+    padding-top: 8px;
+  }
+  header .header-content img {
+    width: 60px;
+    height: 60px;
+  }
   #request .request-conteiner {
     padding: 10px;
   }
   #request .request-conteiner .request-left {
-    padding: 10px;
+    padding: 0px;
+    width: 300px;
   }
   #request .request-conteiner .request-left p {
+    padding-top: 15px;
     font-size: 14px;
   }
   #request .request-conteiner .request-left h1 {
+    margin: 0px;
     font-size: 20px;
   }
   #request .request-conteiner .request-right {
-    padding: 10px;
+    padding: 0px;
+  }
+  #request .request-conteiner .request-right h2 {
+    padding-top: 30px;
+    font-weight: 600;
+    font-size: 21px;
+  }
+  #request .request-conteiner .request-right .user-input {
+    padding: 0px;
+  }
+  #request .request-conteiner .reg-button {
+    padding-bottom: 30px;
   }
 }
 

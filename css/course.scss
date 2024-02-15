@@ -13,9 +13,10 @@ $contentwidth: 1220px;
         margin: 50px auto 10px auto;
         width: $contentwidth;
         text-align: center;
-        height: 500px;
+        height: 450px;
         h1{
-            font-size: 40px;
+            font-size: 32px;
+            font-weight: 500;
         }
 
         .course-elem{
@@ -24,20 +25,25 @@ $contentwidth: 1220px;
             transition: transform 0.5s ease; 
 
             .course{
-                margin: 15px 20px;
+                margin: 20px 25px;
                 text-align: center;
                 color: gray;
+                width: calc(33% - 45px);
                 img{
                     margin-bottom: 10px;
                 }
-            
+                p{
+                    font-size: 14px;
+                }
                 hr{
-                    border-color: #3c93df;
+                    border-color: #50a5f0;
+                    border: 1px solid #7cbffa;
                     margin: 15px 0px 30px 0px;
                 }
                 h3{
-                    font-weight: 900;
-                    font-size: 20px;
+                    color: rgb(65, 65, 65);;
+                    font-weight: 500;
+                    font-size: 22px;
                 }
             }
         }  
@@ -46,11 +52,11 @@ $contentwidth: 1220px;
     .slider-buttons{
         width: 100%;
         text-align: center;
-        margin-bottom: 40px;
+        padding-bottom: 25px;
         button{
-            margin: 5px;
-            width: 10px;
-            height: 10px;
+            margin: 7px;
+            width: 13px;
+            height: 13px;
             background-color: rgb(155, 154, 154);
             border-width: 0px;
             border-radius: 50%;
@@ -62,9 +68,10 @@ $contentwidth: 1220px;
     }
 
     .course-result{
-        padding:20px 0px ;
+        padding:60px 0px ;
         background-color: #3c93df;
         font-family: $font-family;
+
         
         
         .statisctic{
@@ -78,6 +85,16 @@ $contentwidth: 1220px;
                 width:300px;
                 text-align: center;
                 color: #ffffff;
+                h2{
+                    font-weight: 400;
+                    font-size: 26px;
+                }
+
+                p{
+                    font-size: 15px;
+                    font-weight: 300;
+                };
+
                 img{
                     height: 60px;
                     width: fit-content;
@@ -93,13 +110,19 @@ $contentwidth: 1220px;
         .course-saction {
             width: 596px;
             padding: 10px;
+            height: 500px;
             h1{
                 font-size: 30px;
             }
             .course-elem {
+
                 margin: 0 auto;
                 justify-content: space-between;
                 width: 100%;
+                
+                .course{
+                    width: auto;
+                }
             }
         }
         .course-result{
@@ -140,11 +163,13 @@ $contentwidth: 1220px;
 @media(max-width: 600px) {
     #course{
         .course-saction {
-            width:280px;
+            width:300px;
             padding: 10px;
-            margin-top: 10px;
+            margin-top: 40px;
+            height: 400px;
             h1{
-                font-size: 25px;
+                font-size: 22px;
+                margin-bottom: 20px;
             }
             .course-elem {
                 margin: 0 auto;
@@ -152,6 +177,27 @@ $contentwidth: 1220px;
                 width: 100%;
                 .course{
                     margin: 0px;
+                    width: auto;
+                    hr{
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .slider-buttons{
+            margin-bottom: 30px;
+        }
+        .course-result{
+            .statisctic{
+                padding: 30px 0px;
+                .elem-stat{
+                    h2{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
                 }
             }
         }

@@ -8,13 +8,14 @@
   margin: 50px auto 10px auto;
   width: 1220px;
   text-align: center;
-  height: 500px;
+  height: 450px;
 }
 #course .course-saction p {
   color: gray;
 }
 #course .course-saction h1 {
-  font-size: 40px;
+  font-size: 32px;
+  font-weight: 500;
 }
 #course .course-saction .course-elem {
   display: flex;
@@ -22,30 +23,36 @@
   transition: transform 0.5s ease;
 }
 #course .course-saction .course-elem .course {
-  margin: 15px 20px;
+  margin: 20px 25px;
   text-align: center;
   color: gray;
+  width: calc(33% - 45px);
 }
 #course .course-saction .course-elem .course img {
   margin-bottom: 10px;
 }
+#course .course-saction .course-elem .course p {
+  font-size: 14px;
+}
 #course .course-saction .course-elem .course hr {
-  border-color: #3c93df;
+  border-color: #50a5f0;
+  border: 1px solid #7cbffa;
   margin: 15px 0px 30px 0px;
 }
 #course .course-saction .course-elem .course h3 {
-  font-weight: 900;
-  font-size: 20px;
+  color: rgb(65, 65, 65);
+  font-weight: 500;
+  font-size: 22px;
 }
 #course .slider-buttons {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
+  padding-bottom: 25px;
 }
 #course .slider-buttons button {
-  margin: 5px;
-  width: 10px;
-  height: 10px;
+  margin: 7px;
+  width: 13px;
+  height: 13px;
   background-color: rgb(155, 154, 154);
   border-width: 0px;
   border-radius: 50%;
@@ -54,7 +61,7 @@
   background-color: rgb(82, 82, 82);
 }
 #course .course-result {
-  padding: 20px 0px;
+  padding: 60px 0px;
   background-color: #3c93df;
   font-family: "Open Sans", sans-serif;
 }
@@ -70,6 +77,14 @@
   text-align: center;
   color: #ffffff;
 }
+#course .course-result .statisctic .elem-stat h2 {
+  font-weight: 400;
+  font-size: 26px;
+}
+#course .course-result .statisctic .elem-stat p {
+  font-size: 15px;
+  font-weight: 300;
+}
 #course .course-result .statisctic .elem-stat img {
   height: 60px;
   width: fit-content;
@@ -80,6 +95,7 @@
   #course .course-saction {
     width: 596px;
     padding: 10px;
+    height: 500px;
   }
   #course .course-saction h1 {
     font-size: 30px;
@@ -88,6 +104,9 @@
     margin: 0 auto;
     justify-content: space-between;
     width: 100%;
+  }
+  #course .course-saction .course-elem .course {
+    width: auto;
   }
   #course .course-result {
     padding: 0px;
@@ -118,12 +137,14 @@
 }
 @media (max-width: 600px) {
   #course .course-saction {
-    width: 280px;
+    width: 300px;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 40px;
+    height: 400px;
   }
   #course .course-saction h1 {
-    font-size: 25px;
+    font-size: 22px;
+    margin-bottom: 20px;
   }
   #course .course-saction .course-elem {
     margin: 0 auto;
@@ -132,6 +153,23 @@
   }
   #course .course-saction .course-elem .course {
     margin: 0px;
+    width: auto;
+  }
+  #course .course-saction .course-elem .course hr {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  #course .slider-buttons {
+    margin-bottom: 30px;
+  }
+  #course .course-result .statisctic {
+    padding: 30px 0px;
+  }
+  #course .course-result .statisctic .elem-stat h2 {
+    font-size: 18px;
+  }
+  #course .course-result .statisctic .elem-stat p {
+    font-size: 12px;
   }
 }
 

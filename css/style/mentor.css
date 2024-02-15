@@ -14,8 +14,8 @@
 }
 #mentor .mentors-conteiner h1 {
   text-align: center;
-  font-weight: 900;
-  font-size: 40px;
+  font-weight: 500;
+  font-size: 35px;
 }
 #mentor .mentors-conteiner .mentors-elem {
   display: flex;
@@ -24,23 +24,24 @@
   margin: 10px 100px auto 75px;
 }
 #mentor .mentors-conteiner .mentors-elem .mentor-dis p {
-  margin: 20px 0px;
+  margin: 10px 0px;
+  font-weight: 300;
 }
 #mentor .mentors-conteiner .mentors-elem .mentor-dis #mentor_name {
   color: #3c93df;
   font-family: "PT Open Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   margin: 30px 0px;
 }
 #mentor .mentors-conteiner .mentors-buttons {
   width: 100%;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 #mentor .mentors-conteiner .mentors-buttons button {
-  margin: 5px;
-  width: 10px;
-  height: 10px;
+  margin: 7px;
+  width: 13px;
+  height: 13px;
   background-color: rgb(155, 154, 154);
   border-width: 0px;
   border-radius: 50%;
@@ -78,11 +79,15 @@
     font-size: 24px;
   }
   #mentor .mentors-conteiner .mentors-list {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   #mentor .mentors-conteiner .mentors-elem img {
     width: 150px;
     height: 150px;
+  }
+  #mentor .mentors-conteiner .mentors-elem .mentor-dis #mentor_name {
+    font-size: 16px;
+    margin: 25px 0px;
   }
   #mentor .mentors-conteiner .mentors-elem .mentor-dis p {
     font-size: 14px;

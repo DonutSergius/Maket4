@@ -6,7 +6,7 @@
     .qoute-conteiner{
         box-sizing: border-box;
         padding: 15px;
-        padding-top: 100px;
+        padding-top: 65px;
         width: 1220px;
         margin: 0 auto;
         text-align: center;
@@ -14,15 +14,17 @@
     
         h1{
             font-size: 35px;
+            font-weight: 500;
         }
 
         .qoute-list{
             .qoute-elem{
                 .qoute-text {
-                    margin: 50px 150px;
+                    margin: 20px 150px;
                     position: relative;
                     display: flex;
-                    font-size: 20px;
+                    font-size: 22px;
+                    font-weight: 300;
                     span{
                         font-size: 40px;
                         color: gray;
@@ -35,17 +37,19 @@
                     }
                 }
             }
+            h3{
+                font-weight: 500;
+            }
         }
     }
     .qoute-buttons{
         width: 100%;
         text-align: center;
-        margin-bottom: 40px;
-        padding-bottom: 50px;
+        padding-bottom: 25px;
         button{
-            margin: 5px;
-            width: 10px;
-            height: 10px;
+            margin: 7px;
+            width: 13px;
+            height: 13px;
             background-color: rgb(155, 154, 154);
             border-width: 0px;
             border-radius: 50%;
@@ -62,7 +66,7 @@
     #markCurse{
         .qoute-conteiner{
             width:950px;
-            height: 350px;
+            height: 450px;
             padding-top: 30px;
             .qoute-list{
                 .qoute-elem{
@@ -97,16 +101,17 @@
 @media(max-width: 640px){
     #markCurse{
         .qoute-conteiner{
-            width: 280px;
+            width: 300px;
             padding: 10px;
             padding-top: 20px;
+            height: 500px;
             h1{
                 font-size: 22px;
             }
             .qoute-list{
                 .qoute-elem{
                     .qoute-text{
-                        font-size: 12px;
+                        font-size: 14px;
                         margin: 10px auto;
                     }
                 }

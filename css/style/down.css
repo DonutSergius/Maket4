@@ -8,7 +8,7 @@
 #contacts .contacts-container .contacts-list {
   box-sizing: border-box;
   display: flex;
-  padding: 15px;
+  padding: 20px 15px;
   margin: 0px auto;
   width: 1220px;
 }
@@ -18,23 +18,27 @@
   color: #ffffff;
 }
 #contacts .contacts-container .contacts-list .elem-contacts h2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 #contacts .contacts-container .contacts-list .elem-contacts p {
   color: #ffffff;
+  font-weight: 300;
+  font-size: 14px;
 }
 #contacts .contacts-container .contacts-list .elem-contacts img {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 footer {
+  background-color: #f7f7f7;
   text-align: center;
   width: 100%;
   padding: 50px 0px;
 }
 footer p {
   color: #3c93df;
+  font-size: 14px;
 }
 footer a {
   color: grey;
@@ -45,7 +49,7 @@ footer a:hover {
 
 @media (max-width: 1220px) {
   #contacts .contacts-container {
-    padding: 0px;
+    padding: 15px;
   }
   #contacts .contacts-container .contacts-list {
     font-size: 14px;
@@ -55,7 +59,7 @@ footer a:hover {
 }
 @media (max-width: 620px) {
   #contacts .contacts-container {
-    padding: 0px;
+    padding: 15px;
   }
   #contacts .contacts-container .contacts-list {
     justify-content: space-between;
@@ -67,11 +71,20 @@ footer a:hover {
     font-size: 16px;
   }
   #contacts .contacts-container .contacts-list .elem-contacts {
+    padding: 10px 0px;
     width: 135px;
     font-size: 12px;
   }
   #contacts .contacts-container .contacts-list .elem-contacts img {
     margin: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  #contacts .contacts-container .contacts-list .elem-contacts h2 {
+    font-size: 16px;
+  }
+  #contacts .contacts-container .contacts-list .elem-contacts p {
+    font-size: 12px;
   }
   footer {
     padding: 20px 0px;
