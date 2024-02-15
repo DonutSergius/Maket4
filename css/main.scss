@@ -44,6 +44,7 @@ header{
         color: #3c93df;
     }
     .header-content{
+        box-sizing: border-box;
         padding: 15px;
         width: 1220px;
         margin: 0 auto;
@@ -64,6 +65,7 @@ header{
 #request{
     background-color: #f7f7f7;
     .request-conteiner{
+        box-sizing: border-box;
         margin: 0 auto;
         width: $contentwidth;
         display: flex;
@@ -144,7 +146,7 @@ header{
 
 
 
-@media (max-width: 1250px) {
+@media (max-width: 1220px) {
     header {
       margin: 0px;
       .header-content {

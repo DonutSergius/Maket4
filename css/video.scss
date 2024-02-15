@@ -4,6 +4,7 @@
         color:gray;
     }
     .video-content {
+        box-sizing: border-box;
         width: 1220px;
         margin: 0 auto;
         padding: 15px;
@@ -34,7 +35,7 @@
     }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1220px) {
     #video{
         .video-content {
             padding: 0;

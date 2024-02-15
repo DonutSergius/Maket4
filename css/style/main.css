@@ -42,6 +42,7 @@ header button:hover {
   color: #3c93df;
 }
 header .header-content {
+  box-sizing: border-box;
   padding: 15px;
   width: 1220px;
   margin: 0 auto;
@@ -62,6 +63,7 @@ header .header-content .header-right {
   background-color: #f7f7f7;
 }
 #request .request-conteiner {
+  box-sizing: border-box;
   margin: 0 auto;
   width: 1220px;
   display: flex;
@@ -129,7 +131,7 @@ header .header-content .header-right {
   padding: 10px;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1220px) {
   header {
     margin: 0px;
   }

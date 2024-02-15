@@ -4,12 +4,13 @@
         color: grey;
     }
     .qoute-conteiner{
+        box-sizing: border-box;
         padding: 15px;
         padding-top: 100px;
         width: 1220px;
         margin: 0 auto;
         text-align: center;
-        height: 350px;
+        height: 480px;
     
         h1{
             font-size: 35px;
@@ -57,7 +58,7 @@
 }
 
 
-@media(max-width: 1250px){
+@media(max-width: 1220px){
     #markCurse{
         .qoute-conteiner{
             width:950px;
@@ -79,7 +80,7 @@
     #markCurse{
         .qoute-conteiner{
             width:600px;
-            height: 250px;
+            height: 350px;
             padding: 10px;
             .qoute-list{
                 .qoute-elem{
@@ -97,7 +98,6 @@
     #markCurse{
         .qoute-conteiner{
             width: 280px;
-            height: 325px;
             padding: 10px;
             padding-top: 20px;
             h1{

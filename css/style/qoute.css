@@ -5,12 +5,13 @@
   color: grey;
 }
 #markCurse .qoute-conteiner {
+  box-sizing: border-box;
   padding: 15px;
   padding-top: 100px;
   width: 1220px;
   margin: 0 auto;
   text-align: center;
-  height: 350px;
+  height: 480px;
 }
 #markCurse .qoute-conteiner h1 {
   font-size: 35px;
@@ -49,7 +50,7 @@
   background-color: rgb(82, 82, 82);
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1220px) {
   #markCurse .qoute-conteiner {
     width: 950px;
     height: 350px;
@@ -63,7 +64,7 @@
 @media (max-width: 980px) {
   #markCurse .qoute-conteiner {
     width: 600px;
-    height: 250px;
+    height: 350px;
     padding: 10px;
   }
   #markCurse .qoute-conteiner .qoute-list .qoute-elem .qoute-text {
@@ -74,7 +75,6 @@
 @media (max-width: 640px) {
   #markCurse .qoute-conteiner {
     width: 280px;
-    height: 325px;
     padding: 10px;
     padding-top: 20px;
   }

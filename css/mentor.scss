@@ -5,6 +5,7 @@
         color: gray;
     };
     .mentors-conteiner{
+        box-sizing: border-box;
         width:1220px;
         margin: 0 auto;
         padding: 15px;
@@ -56,7 +57,7 @@
     }
 }
 
-@media(max-width:1250px){
+@media(max-width:1220px){
     #mentor{
         .mentors-conteiner{
             width: 900px;

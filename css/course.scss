@@ -3,8 +3,8 @@ $contentwidth: 1220px;
 
 #course{
     background-color: #ffffff;
-
     .course-saction{
+        box-sizing: border-box;
         p{
             color:gray;
         }
@@ -73,6 +73,7 @@ $contentwidth: 1220px;
             padding: 15px;
             margin: 0px auto;
             width: $contentwidth;
+            box-sizing: border-box;
 
             .elem-stat{
                 text-align: center;
@@ -87,7 +88,7 @@ $contentwidth: 1220px;
     }
 }
 
-@media(max-width: 1250px) {
+@media(max-width: 1220px) {
     #course{
         .course-saction {
             width: 596px;
@@ -119,7 +120,7 @@ $contentwidth: 1220px;
 
             .statisctic {
                 justify-content: center;
-                margin: 10px auto;
+                margin: 0px auto;
                 flex-wrap: wrap;
                 width: 280px;
                 padding: 0px;
