@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentIndex - 1 < 0) {
         document.getElementById('c' + (courses.length - 1)).style.backgroundColor = "grey";
       } else {
-        document.getElementById('c' + (currentIndex - 1)).style.backgroundColor = "grey";
+        document.getElementById('c' + (currentIndex - 1)).style.backgroundColor = "#525252";
       }
       
-      document.getElementById('c' + currentIndex).style.backgroundColor = "black";
+      document.getElementById('c' + currentIndex).style.backgroundColor = "#525252";
       
       if (currentIndex + 1 >= courses.length) {
         document.getElementById('c' + 0).style.backgroundColor = "grey";
@@ -71,7 +71,7 @@ function  showCourses(){
       document.getElementById(`c${currentIndex - 1}`).style.backgroundColor = "grey";
     }
 
-    document.getElementById(`c${currentIndex}`).style.backgroundColor = "black";
+    document.getElementById(`c${currentIndex}`).style.backgroundColor = "#525252";
 
     if (currentIndex + 1 >= courses.length) {
       document.getElementById(`c${0}`).style.backgroundColor = "grey";

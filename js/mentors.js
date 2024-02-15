@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(`m${currentIndex - 1}`).style.backgroundColor = "grey";
           }
     
-          document.getElementById(`m${currentIndex}`).style.backgroundColor = "black";
+          document.getElementById(`m${currentIndex}`).style.backgroundColor = "#525252";
     
           if (currentIndex + 1 >= courses.length) {
             document.getElementById(`m${0}`).style.backgroundColor = "grey";

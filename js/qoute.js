@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(`q${currentIndex - 1}`).style.backgroundColor = "grey";
           }
     
-          document.getElementById(`q${currentIndex}`).style.backgroundColor = "black";
+          document.getElementById(`q${currentIndex}`).style.backgroundColor = "#525252";
     
           if (currentIndex + 1 >= courses.length) {
             document.getElementById(`q${0}`).style.backgroundColor = "grey";
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
               document.getElementById(`q${currentIndex - 1}`).style.backgroundColor = "grey";
             }
       
-            document.getElementById(`q${currentIndex}`).style.backgroundColor = "black";
+            document.getElementById(`q${currentIndex}`).style.backgroundColor = "#525252";
       
             if (currentIndex + 1 >= courses.length) {
               document.getElementById(`q${0}`).style.backgroundColor = "grey";
