@@ -26,74 +26,79 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (courses.length > minCount) {
-      sliderButtonsContainer.innerHTML = "";
-      for (let i = 0; i < courses.length; i++) {
-        const button = document.createElement("button");
-        button.textContent = "";
-        button.addEventListener("click", () => {
-          currentIndex = i;
-          console.log("currentIndex:", currentIndex);
-          if (currentIndex - 1 < 0) {
-            document.getElementById('c' + (courses.length - 1)).style.backgroundColor = "grey";
-          } else {
-            document.getElementById('c' + (currentIndex - 1)).style.backgroundColor = "grey";
-          }
-          
-          document.getElementById('c' + currentIndex).style.backgroundColor = "black";
-          
-          if (currentIndex + 1 >= courses.length) {
-            document.getElementById('c' + 0).style.backgroundColor = "grey";
-          } else {
-            document.getElementById('c' + (currentIndex + 1)).style.backgroundColor = "grey";
-          }
-          showCourses();
-        });
-        button.id = `c${i}`;
-        sliderButtonsContainer.appendChild(button);
-      }
+      createButtons();
     } else {
       sliderButtonsContainer.innerHTML = "";
     }
 }    
 
-  function showCourses() {
-    container.innerHTML = "";
-    const startIndex = currentIndex;
-    const endIndex = (currentIndex + coursesPerPage) % courses.length;
+ function createButtons() {
+  sliderButtonsContainer.innerHTML = "";
+  for (let i = 0; i < courses.length; i++) {
+    const button = document.createElement("button");
+    button.textContent = "";
+    button.addEventListener("click", () => {
+      currentIndex = i;
+      console.log("currentIndex:", currentIndex);
+      if (currentIndex - 1 < 0) {
+        document.getElementById('c' + (courses.length - 1)).style.backgroundColor = "grey";
+      } else {
+        document.getElementById('c' + (currentIndex - 1)).style.backgroundColor = "grey";
+      }
+      
+      document.getElementById('c' + currentIndex).style.backgroundColor = "black";
+      
+      if (currentIndex + 1 >= courses.length) {
+        document.getElementById('c' + 0).style.backgroundColor = "grey";
+      } else {
+        document.getElementById('c' + (currentIndex + 1)).style.backgroundColor = "grey";
+      }
+      showCourses(); 
+    });
+    button.id = `c${i}`;
+    sliderButtonsContainer.appendChild(button);
+        }
+  }
 
-    if (currentIndex - 1 < 0) {
-      document.getElementById('c' + (courses.length - 1)).style.backgroundColor = "grey";
+
+function  showCourses(){
+  var windowWidth2 = window.innerWidth;
+  container.innerHTML = "";
+  if(windowWidth2 < 1220){
+  if (currentIndex - 1 < 0) {
+      document.getElementById(`c${courses.length - 1}`).style.backgroundColor = "grey";
     } else {
-      document.getElementById('c' + (currentIndex - 1)).style.backgroundColor = "grey";
+      document.getElementById(`c${currentIndex - 1}`).style.backgroundColor = "grey";
     }
-    
-    document.getElementById('c' + currentIndex).style.backgroundColor = "black";
-    
+
+    document.getElementById(`c${currentIndex}`).style.backgroundColor = "black";
+
     if (currentIndex + 1 >= courses.length) {
-      document.getElementById('c' + 0).style.backgroundColor = "grey";
+      document.getElementById(`c${0}`).style.backgroundColor = "grey";
     } else {
-      document.getElementById('c' + (currentIndex + 1)).style.backgroundColor = "grey";
+      document.getElementById(`c${currentIndex + 1}`).style.backgroundColor = "grey";
     }
+  }
 
-    if (startIndex < endIndex) {
+  const startIndex = currentIndex;
+  const endIndex = (currentIndex + coursesPerPage) % courses.length;
+
+  if (startIndex < endIndex) {
       const visibleCourses = Array.from(courses).slice(startIndex, endIndex);
       visibleCourses.forEach((course) => {
-        const clonedCourse = course.cloneNode(true);
-        container.appendChild(clonedCourse);
+          const clonedCourse = course.cloneNode(true);
+          container.appendChild(clonedCourse);
       });
-    } else {
+  } else {
       const visibleCourses = Array.from(courses)
-        .slice(startIndex)
-        .concat(Array.from(courses).slice(0, endIndex));
+          .slice(startIndex)
+          .concat(Array.from(courses).slice(0, endIndex));
       visibleCourses.forEach((course) => {
-        const clonedCourse = course.cloneNode(true);
-        container.appendChild(clonedCourse);
-      });        
-
-    }
-
-    container.style.transition = "transform 0.5s ease-in-out";
+          const clonedCourse = course.cloneNode(true);
+          container.appendChild(clonedCourse);
+      });
   }
+}
 
   function handleResize() {
     updateCoursesPerPage();

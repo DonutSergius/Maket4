@@ -17,6 +17,9 @@
   text-align: center;
   color: #ffffff;
 }
+#contacts .contacts-container .contacts-list .elem-contacts h2 {
+  font-size: 20px;
+}
 #contacts .contacts-container .contacts-list .elem-contacts p {
   color: #ffffff;
 }

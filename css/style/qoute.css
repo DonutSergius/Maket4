@@ -85,6 +85,9 @@
     font-size: 12px;
     margin: 10px auto;
   }
+  #markCurse .qoute-buttons {
+    margin-bottom: 0px;
+  }
 }
 
 /*# sourceMappingURL=qoute.css.map */

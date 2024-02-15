@@ -70,6 +70,7 @@
 }
 @media (max-width: 620px) {
   #mentor .mentors-conteiner {
+    margin-top: 10px;
     width: 280px;
     text-align: center;
   }
