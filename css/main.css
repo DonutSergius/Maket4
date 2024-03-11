@@ -64,10 +64,10 @@ header .header-content .header-right {
 }
 #request .request-conteiner {
   box-sizing: border-box;
-  margin: 0 auto;
   width: 1220px;
   display: flex;
   padding: 15px;
+  margin: 0px auto;
   padding-top: 30px;
 }
 #request .request-conteiner .request-left {

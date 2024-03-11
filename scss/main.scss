@@ -1,4 +1,5 @@
 @import 'variable';
+@import 'mixin';
 
 body{
     font-family: $font-family;
@@ -65,15 +66,17 @@ header{
     background-color: #f7f7f7;
     .request-conteiner{
         box-sizing: border-box;
-        margin: 0 auto;
+
         width: $contentwidth;
-        display: flex;
-        padding: 15px;
+        // display: flex;
+        // padding: 15px;
+        // margin: 0 auto;
+        @include positionCenter($paddingS);
         padding-top: 30px;
 
         .request-left{
             margin-right: auto;
-            padding: 15px;
+            padding: $paddingS;
             align-self: end;
             text-align: center;
             width: 50%;
@@ -139,7 +142,7 @@ header{
         .reg-button {
             text-align: center;
             width: 50%;
-            margin-bottom: 15px;
+            margin-bottom: $paddingS;
             button{
                 border: 0px;
                 border-radius: 50px;
@@ -219,7 +222,7 @@ header{
         margin: 0;
         padding:10px 20px;
         border-radius: 70px;
-        font-size: 16px;
+        font-size: $font-sizeS;
         border:none;
         box-shadow: none;
     }
@@ -262,7 +265,7 @@ header{
                 margin: 0 auto;
 
                 p{
-                    font-size: 16px;
+                    font-size: $font-sizeS;
                 }
                 h1{
                     font-size: 24px;
@@ -283,7 +286,7 @@ header{
                 margin: 0px auto;
                 text-align: center;
             button{
-                margin-bottom: 15px;
+                margin-bottom: $paddingS;
                 border: 0px;
                 border-radius: 50px;
                 width: 100%;
@@ -367,8 +370,8 @@ header{
                 padding: 0px;
                 width: 300px;
                 p{
-                    padding-top: 15px;
-                    font-size: 14px;
+                    padding-top: $paddingS;
+                    font-size: $font-sizeP;
                 }
                 h1{
                     margin: 0px;
@@ -395,7 +398,7 @@ header{
             }
             .reg-button{
                 width: 300px;
-                padding-top: 15px;
+                padding-top: $paddingS;
                 padding-bottom: 30px;
             }
         }

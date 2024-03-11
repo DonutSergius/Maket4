@@ -1,5 +1,5 @@
 @import 'variable';
-
+@import 'mixin';
 
 #course{
     background-color: #ffffff;
@@ -9,7 +9,7 @@
             color:gray;
         }
         font-family: $font-family;
-        padding: 15px;
+        padding: $paddingS;
         margin: 50px auto 10px auto;
         width: $contentwidth;
         text-align: center;
@@ -78,9 +78,10 @@
         
         
         .statisctic{
-            display: flex;
-            padding: 15px;
-            margin: 0px auto;
+            @include positionCenter(15px);
+            // display: flex;
+            // padding: 15px;
+            // margin: 0px auto;
             width: $contentwidth;
             box-sizing: border-box;
 
@@ -100,7 +101,7 @@
 
                 img{
                     width: min-content;
-                    margin: 15px;
+                    margin: $paddingS;
                 }
             }
        }

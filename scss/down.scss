@@ -1,5 +1,5 @@
 @import 'variable';
-
+@import 'mixin';
 
 #contacts{
     margin-top: -8px;
@@ -10,17 +10,18 @@
         
         .contacts-list{
             box-sizing: border-box;
-            display: flex;
-            padding: 20px 15px;
-            margin: 0px auto;
-            width: 1220px;
+            // display: flex;
+            // padding: 20px 15px;
+            // margin: 0px auto;
+            @include positionCenter($paddingS);
+            width: $contentwidth;
 
             .elem-contacts{
                 width:300px;
                 text-align: center;
                 color: #ffffff;
                 h2{
-                    font-size: 16px;
+                    font-size: $font-sizeS;
                 }
                 p{
                     color:#ffffff;
@@ -58,7 +59,7 @@ footer{
 @media(max-width: 1220px) {
     #contacts{
         .contacts-container{
-            padding: 15px;
+            padding: $paddingS;
 
             .contacts-list{
                 font-size: $font-sizeP;
@@ -72,7 +73,7 @@ footer{
 @media(max-width: 620px) {
     #contacts{
         .contacts-container{
-            padding: 15px;
+            padding: $paddingS;
 
             .contacts-list{
                 justify-content: space-between;
@@ -93,7 +94,7 @@ footer{
                         height: 40px;
                     }
                     h2{
-                        font-size: 16px;
+                        font-size: $font-sizeS;
                     }
                     p{
                         font-size: 12px;
