@@ -1,0 +1,11 @@
+@import url(course.css);
+@import url(down.css);
+@import url(main.css);
+@import url(mentor.css);
+@import url(qoute.css);
+@import url(video.css);
+
+.slick-slide img{
+    display:inline;
+    text-align: center;
+}

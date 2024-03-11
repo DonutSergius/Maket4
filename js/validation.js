@@ -6,49 +6,65 @@ function validateForm() {
     const emailInput = document.getElementById('emailInput');
     const privacyCheckbox = document.getElementById('privacyCheckbox');
 
+    const nameError = document.getElementById("nameError");
+const surnameError = document.getElementById("surnameError");
+const intError = document.getElementById("intError");
+const telError = document.getElementById("telError");
+const emailError = document.getElementById("emailError");
+
     const nameRegex = /^[^\d]+$/;
     var isValid = true;
 
     if (!nameRegex.test(nameInput.value) || nameInput.value == "") {
         nameInput.setCustomValidity("Ім'я може містити тільки літери");
         error(nameInput);
+        nameError.textContent = "Ім'я може містити тільки літери";
         isValid = false;
     } else {
         clearStyle(nameInput);
+        nameError.textContent = "";
     }
-
+    
     if (!nameRegex.test(surnameInput.value) || surnameInput.value == "") {
         surnameInput.setCustomValidity("Прізвище може містити тільки літери");
         error(surnameInput);
+        surnameError.textContent = "Прізвище може містити тільки літери";
         isValid = false;
     } else {
         clearStyle(surnameInput);
+        surnameError.textContent = "";
     }
-
-    if(interestInput.value !== "developer" && interestInput.value !== "QA"){
+    
+    if (interestInput.value !== "developer" && interestInput.value !== "QA"){
         interestInput.setCustomValidity("Напишіть або developer або QA");
         error(interestInput);
+        intError.textContent = "Напишіть або developer або QA";
         isValid = false;
     } else {
         clearStyle(interestInput);
+        intError.textContent = "";
     }
-
+    
     const phoneRegex = /^\+38\d{3}\d{2}\d{2}\d{3}$/;
     if (!phoneRegex.test(phoneInput.value) || phoneInput.value =="") {
         phoneInput.setCustomValidity("Формат телефону: +38xxxxxxxxxx");
         error(phoneInput);
+        telError.textContent = "Формат телефону: +38xxxxxxxxxx";
         isValid = false;
     } else {
         clearStyle(phoneInput);
+        telError.textContent = "";
     }
-
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value) || emailInput.value == "") {
         emailInput.setCustomValidity("Некоректний формат Email");
         error(emailInput);
+        emailError.textContent = "Некоректний формат Email";
         isValid = false;
     } else {
         clearStyle(emailInput);
+        emailError.textContent = "";
     }
 
     if (!privacyCheckbox.checked) {

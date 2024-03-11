@@ -90,9 +90,12 @@ header .header-content .header-right {
   font-weight: 600;
   font-size: 34px;
 }
+#request .request-conteiner form {
+  width: 50%;
+}
 #request .request-conteiner .request-right {
   padding: 15px;
-  width: 50%;
+  width: auto;
 }
 #request .request-conteiner .request-right h2 {
   color: rgb(65, 65, 65);
@@ -130,6 +133,8 @@ header .header-content .header-right {
 }
 #request .request-conteiner .reg-button {
   text-align: center;
+  width: 50%;
+  margin-bottom: 15px;
 }
 #request .request-conteiner .reg-button button {
   border: 0px;
@@ -219,14 +224,9 @@ header .header-content .header-right {
   border-radius: 2px;
 }
 
-.menu-button::before {
+.menu-button::before, .menu-button::after {
   content: "";
   margin-top: -8px;
-}
-
-.menu-button::after {
-  content: "";
-  margin-top: 8px;
 }
 
 @media (max-width: 930px) {
@@ -243,8 +243,10 @@ header .header-content .header-right {
   #request .request-conteiner .request-left h1 {
     font-size: 24px;
   }
+  #request .request-conteiner form {
+    width: 100%;
+  }
   #request .request-conteiner .request-right {
-    width: 90%;
     margin: 0 auto;
   }
   #request .request-conteiner .request-right h2 {
@@ -252,10 +254,11 @@ header .header-content .header-right {
     font-weight: 600;
   }
   #request .request-conteiner .reg-button {
-    margin-top: 20px;
+    margin: 0px auto;
     text-align: center;
   }
   #request .request-conteiner .reg-button button {
+    margin-bottom: 15px;
     border: 0px;
     border-radius: 50px;
     width: 100%;
@@ -339,6 +342,11 @@ header .header-content .header-right {
     margin: 0px;
     font-size: 20px;
   }
+  #request .request-conteiner form {
+    max-width: 300px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
   #request .request-conteiner .request-right {
     padding: 0px;
   }
@@ -351,6 +359,8 @@ header .header-content .header-right {
     padding: 0px;
   }
   #request .request-conteiner .reg-button {
+    width: 300px;
+    padding-top: 15px;
     padding-bottom: 30px;
   }
 }

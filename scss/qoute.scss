@@ -1,3 +1,6 @@
+@import 'variable';
+    
+
 #markCurse{
     background-color: #ffffff;
     p{
@@ -57,10 +60,12 @@
             &:hover{
                 background-color: rgb(82, 82, 82);
             }
+            &.active {
+                background-color: rgb(82, 82, 82);
+            }
         }
     }
 }
-
 
 @media(max-width: 1220px){
     #markCurse{
@@ -89,7 +94,7 @@
             .qoute-list{
                 .qoute-elem{
                     .qoute-text{
-                        font-size: 14px;
+                        font-size: $font-sizeP;
                         margin: 10px auto;
                     }
                 }
@@ -111,7 +116,7 @@
             .qoute-list{
                 .qoute-elem{
                     .qoute-text{
-                        font-size: 14px;
+                        font-size: $font-sizeP;
                         margin: 10px auto;
                     }
                 }

@@ -1,9 +1,8 @@
-$font-family: 'Open Sans', sans-serif;
-$contentwidth: 1220px;
+@import 'variable';
 
 body{
     font-family: $font-family;
-    font-size: 16px;
+    font-size: $font-sizeS;
 }
 
 input{
@@ -92,10 +91,10 @@ header{
                 font-size: 34px;
             }
         }
-
+        form{width: 50%;}
         .request-right{
             padding: 15px;
-            width:50%;
+            width: auto;
         
             h2{
                 color: rgb(65, 65, 65);
@@ -134,10 +133,13 @@ header{
                 a:hover{
                     text-decoration: underline;
                 }
-            }            
+            }
+                          
         }
         .reg-button {
             text-align: center;
+            width: 50%;
+            margin-bottom: 15px;
             button{
                 border: 0px;
                 border-radius: 50px;
@@ -149,7 +151,8 @@ header{
             button:hover{
                     background-color: #0f5694;
                 }
-        }         
+        }      
+          
     }
 }
 
@@ -242,14 +245,11 @@ header{
    border-radius: 2px;
 }
   
-.menu-button::before {
-   content: '';
-   margin-top: -8px;
-}
-  
-.menu-button::after {
-   content: '';
-   margin-top: 8px;
+.menu-button{
+    &::before, &::after{
+        content: '';
+        margin-top: -8px;
+    }
 }
 
 @media (max-width: 930px) {
@@ -268,9 +268,8 @@ header{
                     font-size: 24px;
                 }
             }
-
+            form{width: 100%;}
             .request-right{
-                width: 90%;
                 margin: 0 auto;
         
                 h2{
@@ -281,9 +280,10 @@ header{
  
             }
             .reg-button{
-                margin-top: 20px;
+                margin: 0px auto;
                 text-align: center;
             button{
+                margin-bottom: 15px;
                 border: 0px;
                 border-radius: 50px;
                 width: 100%;
@@ -375,7 +375,11 @@ header{
                     font-size: 20px;
                 }
             }
-
+            form{
+                max-width: 300px;
+                padding: 0 10px;
+                margin: 0 auto;
+            }
             .request-right{
                 padding: 0px;
                 h2{
@@ -390,6 +394,8 @@ header{
                 }
             }
             .reg-button{
+                width: 300px;
+                padding-top: 15px;
                 padding-bottom: 30px;
             }
         }

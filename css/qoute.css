@@ -53,6 +53,9 @@
 #markCurse .qoute-buttons button:hover {
   background-color: rgb(82, 82, 82);
 }
+#markCurse .qoute-buttons button.active {
+  background-color: rgb(82, 82, 82);
+}
 
 @media (max-width: 1220px) {
   #markCurse .qoute-conteiner {

@@ -55,6 +55,9 @@
 #mentor .mentors-conteiner .mentors-buttons button:hover {
   background-color: rgb(82, 82, 82);
 }
+#mentor .mentors-conteiner .mentors-buttons button.active {
+  background-color: rgb(82, 82, 82);
+}
 
 @media (max-width: 1220px) {
   #mentor .mentors-conteiner {

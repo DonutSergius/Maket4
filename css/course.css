@@ -60,6 +60,9 @@
 #course .slider-buttons button:hover {
   background-color: rgb(82, 82, 82);
 }
+#course .slider-buttons button.active {
+  background-color: rgb(82, 82, 82);
+}
 #course .course-result {
   padding: 60px 0px;
   background-color: #3c93df;
@@ -86,8 +89,7 @@
   font-weight: 300;
 }
 #course .course-result .statisctic .elem-stat img {
-  height: 60px;
-  width: fit-content;
+  width: min-content;
   margin: 15px;
 }
 

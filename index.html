@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style/main.css" />
+    <!--Slick Slider-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
     <link rel="stylesheet" href="css/null.css" />
-    <link rel="stylesheet" href="css/style/course.css" />
-    <link rel="stylesheet" href="css/style/qoute.css" />
-    <link rel="stylesheet" href="css/style/video.css" />
-    <link rel="stylesheet" href="css/style/mentor.css" />
-    <link rel="stylesheet" href="css/style/down.css" />
+    <link rel="stylesheet" href="css/all_style.css" />
 
     <title>0xIT</title>
   </head>
@@ -121,42 +128,52 @@
 
         <!-- Right block -->
         <!--=================================================================-->
-        <div class="request-right">
-          <h2>Зареєструватися на курси</h2>
-          <div class="user-input">
-            <p>Ім'я</p>
-            <input type="text" id="nameInput" placeholder="Ім'я" />
-            <p>Прізвище</p>
-            <input type="text" id="surnameInput" placeholder="Прізвище" />
-            <p>Мене більше цікавить</p>
-            <input
-              type="text"
-              id="interestInput"
-              placeholder="developer or QA"
-            />
-            <p>Номер телефону</p>
-            <input
-              type="tel"
-              id="phoneInput"
-              placeholder="Номер телефону: +38 XXX XX XX XXX"
-            />
-            <p>Email</p>
-            <input type="email" id="emailInput" placeholder="Email" />
+        <form id="myForm">
+          <div class="request-right">
+            <h2>Зареєструватися на курси</h2>
+
+            <div class="user-input">
+              <p>Ім'я <span id="nameError" style="color: red"></span></p>
+              <input type="text" id="nameInput" placeholder="Ім'я" />
+              <p>Прізвище <span id="surnameError" style="color: red"></span></p>
+              <input type="text" id="surnameInput" placeholder="Прізвище" />
+              <p>
+                Мене більше цікавить
+                <span id="intError" style="color: red"></span>
+              </p>
+              <input
+                type="text"
+                id="interestInput"
+                placeholder="developer or QA"
+              />
+              <p>
+                Номер телефону <span id="telError" style="color: red"></span>
+              </p>
+              <input
+                type="tel"
+                id="phoneInput"
+                placeholder="Номер телефону: +38 XXX XX XX XXX"
+              />
+              <p>Email <span id="emailError" style="color: red"></span></p>
+              <input type="email" id="emailInput" placeholder="Email" />
+            </div>
+            <div class="right-chekbox">
+              <input type="checkbox" id="privacyCheckbox" /> Я погоджуюся із
+              <a href="#">Політикою Конфіденційності</a>
+            </div>
           </div>
-          <div class="right-chekbox">
-            <input type="checkbox" id="privacyCheckbox" /> Я погоджуюся із
-            <a href="#">Політикою Конфіденційності</a>
-          </div>
-        </div>
+        </form>
       </div>
       <div class="request-conteiner" style="padding-top: 0px">
-        <div class="request-right" style="padding-top: 0px"></div>
-        <div class="request-left" style="padding-top: 0px">
-          <div class="reg-button">
-            <button onclick="validateForm()">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
-          </div>
+        <div class="request-left" style="padding-top: 0px"></div>
+
+        <div class="reg-button">
+          <button type="button" onclick="validateForm()">
+            ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ
+          </button>
         </div>
       </div>
+
       <!--=================================================================-->
       <!-- End Left block-->
     </section>
@@ -167,7 +184,7 @@
       <div class="course-saction">
         <h1>Курс «Розробка сайтів»</h1>
         <div class="course-elem">
-          <!--Перший елемент-->
+          <!--First elem-->
           <!--=================================================================-->
           <div class="course">
             <img src="img/icons/course-icon-1.png" alt="course-icon-1" />
@@ -183,7 +200,7 @@
           <!--=================================================================-->
           <!--END-->
           <!---->
-          <!--Другий елемент-->
+          <!--Second elem-->
           <!--=================================================================-->
           <div class="course">
             <img src="img/icons/course-icon-2.png" alt="course-icon-2" />
@@ -198,7 +215,7 @@
           <!--=================================================================-->
           <!--END-->
           <!---->
-          <!--Тертій елемент-->
+          <!--Third elem-->
           <!--=================================================================-->
           <div class="course">
             <img src="img/icons/course-icon-3.png" alt="course-icon-3" />
@@ -214,8 +231,12 @@
           <!--END-->
         </div>
       </div>
-      <div class="slider-buttons"></div>
-      <!-- Статистика курсів -->
+      <div class="slider-buttons">
+        <button id="cbtn0"></button>
+        <button id="cbtn1"></button>
+        <button id="cbtn2"></button>
+      </div>
+      <!-- Statistics-->
       <!--=================================================================-->
       <div class="course-result">
         <div class="statisctic">
@@ -242,7 +263,7 @@
         </div>
       </div>
       <!--=================================================================-->
-      <!-- Кінець статистики курсів -->
+      <!-- END Statistics- -->
     </section>
     <!-- END NAME COURSES-->
     <!---->
@@ -251,7 +272,7 @@
       <div class="qoute-conteiner">
         <h1>Що кажуть студенти наших курсів:</h1>
         <div class="qoute-list">
-          <!--Перший елемент-->
+          <!--First elem-->
           <!--=================================================================-->
           <div class="qoute-elem">
             <div class="qoute-text">
@@ -272,7 +293,7 @@
           <!--=================================================================-->
           <!--END-->
           <!---->
-          <!--Другий елемент-->
+          <!--Second elem-->
           <!--=================================================================-->
           <div class="qoute-elem">
             <div class="qoute-text">
@@ -293,7 +314,7 @@
           <!--=================================================================-->
           <!--END-->
           <!---->
-          <!--Тертій елемент-->
+          <!--Third elem-->
           <!--=================================================================-->
           <div class="qoute-elem">
             <div class="qoute-text">
@@ -311,7 +332,11 @@
           <!--END-->
         </div>
       </div>
-      <div class="qoute-buttons"></div>
+      <div class="qoute-buttons">
+        <button id="btn1"></button>
+        <button id="btn2"></button>
+        <button id="btn3"></button>
+      </div>
     </section>
     <!-- END QOUTE CURSES -->
     <!---->
@@ -351,7 +376,7 @@
       <div class="mentors-conteiner">
         <h1>Наші ментори</h1>
         <div class="mentors-list">
-          <!--Перший елемент-->
+          <!--First elem-->
           <!--=================================================================-->
           <div class="mentors-elem">
             <img src="img/viktor.png" alt="mentor_Viktor" />
@@ -386,7 +411,7 @@
           <!--=================================================================-->
           <!--END-->
           <!---->
-          <!--Другий елемент-->
+          <!--Second elem-->
           <!--=================================================================-->
           <div class="mentors-elem">
             <img src="img/mark.png" alt="mentor_Mark" />
@@ -421,7 +446,7 @@
           <!--=================================================================-->
           <!--END-->
           <!---->
-          <!--Третій елемент-->
+          <!--Third elem-->
           <!--=================================================================-->
           <div class="mentors-elem">
             <img src="img/vova.png" alt="mentor_Vova" />
@@ -456,7 +481,11 @@
           <!--=================================================================-->
           <!--END-->
         </div>
-        <div class="mentors-buttons"></div>
+        <div class="mentors-buttons">
+          <button id="mbtn1"></button>
+          <button id="mbtn2"></button>
+          <button id="mbtn3"></button>
+        </div>
       </div>
     </section>
     <!-- END MENTOR-->
@@ -471,11 +500,11 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </section>
-    <!-- Контактна інформація -->
+    <!-- Contacts -->
     <section id="contacts">
       <div class="contacts-container">
         <div class="contacts-list">
-          <!-- Перший лемент -->
+          <!-- First elem -->
           <!--=================================================================-->
           <div class="elem-contacts">
             <a href="tel:+38 067 332 17 55">
@@ -487,7 +516,7 @@
           <!--=================================================================-->
           <!-- END -->
           <!---->
-          <!-- Другий елмент -->
+          <!-- Second elem -->
           <!--=================================================================-->
           <div class="elem-contacts">
             <a href="mailto:office@it.volyn.ua">
@@ -499,7 +528,7 @@
           <!--=================================================================-->
           <!-- END -->
           <!---->
-          <!-- Третій елмент -->
+          <!-- Third elem -->
           <!--=================================================================-->
           <div class="elem-contacts">
             <a href="https://maps.app.goo.gl/hko1SmDeL6uaaNfg8" target="_blank">
@@ -511,7 +540,7 @@
           <!--=================================================================-->
           <!-- END -->
           <!---->
-          <!-- Четвертий елмент -->
+          <!-- Fourth elem -->
           <!--=================================================================-->
           <div class="elem-contacts">
             <a href="https://www.facebook.com/oxitschool" target="_blank">
@@ -532,11 +561,19 @@
       </p>
     </footer>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
 
-  <!-- Скріпт для слайдера -->
+  <!-- Slider -->
   <script src="js/sliders.js"></script>
-  <!-- Скріпт для менюшки -->
+  <!-- Menu -->
   <script src="js/menu.js"></script>
-  <!-- Скріпт для валідайції форми -->
+  <!-- Valid form -->
   <script src="js/validation.js"></script>
+
+  <script src="js/qoute_slider.js"></script>
+  <script src="js/mentor_slider.js"></script>
 </html>

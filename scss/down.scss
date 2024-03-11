@@ -1,3 +1,6 @@
+@import 'variable';
+
+
 #contacts{
     margin-top: -8px;
     .contacts-container{
@@ -22,7 +25,7 @@
                 p{
                     color:#ffffff;
                     font-weight: 300;
-                    font-size: 14px;
+                    font-size: $font-sizeP;
                 }
                 img{
                     height: 60px;
@@ -41,7 +44,7 @@ footer{
     padding: 50px 0px;
     p{
         color: #3c93df;
-        font-size: 14px;
+        font-size: $font-sizeP;
     }
     a{
         color:grey;
@@ -58,7 +61,7 @@ footer{
             padding: 15px;
 
             .contacts-list{
-                font-size: 14px;
+                font-size: $font-sizeP;
                 width:600px;
                 padding: 10px 0px;
             }
@@ -78,7 +81,7 @@ footer{
                 width: 280px;
                 
                 h2{
-                    font-size: 16px;
+                    font-size: $font-sizeS;
                 }
                 .elem-contacts{
                     padding: 10px 0px;

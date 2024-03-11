@@ -68,23 +68,26 @@
   #video .video-content .title-dis p {
     font-size: 16px;
   }
+  #video .video-content .videoUrl {
+    padding: 0 10px;
+  }
   #video .video-content .videoUrl iframe {
     width: 100%;
     height: 300px;
   }
 }
 @media (max-width: 500px) {
-  #video .videoUrl iframe {
+  #video .video-content .videoUrl iframe {
     width: 100%;
     height: 200px;
   }
-  #video .title-dis {
+  #video .video-content .title-dis {
     max-width: 280px;
   }
-  #video .title-dis h1 {
+  #video .video-content .title-dis h1 {
     font-size: 24px;
   }
-  #video .title-dis p {
+  #video .video-content .title-dis p {
     font-size: 12px;
   }
 }
@@ -95,13 +98,6 @@
   #video .video-content .title-dis h1 {
     padding-top: 70px;
     font-size: 26px;
-  }
-  #video .videoUrl {
-    padding-bottom: 30px;
-  }
-  #video .videoUrl iframe {
-    width: 100%;
-    height: 100px;
   }
 }
 
