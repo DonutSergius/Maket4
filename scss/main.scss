@@ -68,9 +68,6 @@ header{
         box-sizing: border-box;
 
         width: $contentwidth;
-        // display: flex;
-        // padding: 15px;
-        // margin: 0 auto;
         @include positionCenter($paddingS);
         padding-top: 30px;
 
@@ -249,9 +246,13 @@ header{
 }
   
 .menu-button{
-    &::before, &::after{
+    &::before{
         content: '';
         margin-top: -8px;
+    }
+    &::after{
+        content: '';
+        margin-top: 8px;
     }
 }
 

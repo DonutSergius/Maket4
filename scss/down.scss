@@ -10,9 +10,6 @@
         
         .contacts-list{
             box-sizing: border-box;
-            // display: flex;
-            // padding: 20px 15px;
-            // margin: 0px auto;
             @include positionCenter($paddingS);
             width: $contentwidth;
 

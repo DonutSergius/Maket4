@@ -224,9 +224,13 @@ header .header-content .header-right {
   border-radius: 2px;
 }
 
-.menu-button::before, .menu-button::after {
+.menu-button::before {
   content: "";
   margin-top: -8px;
+}
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
 }
 
 @media (max-width: 930px) {
